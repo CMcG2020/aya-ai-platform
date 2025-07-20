@@ -122,10 +122,4 @@
     "last 2 versions",
     "not dead"
   ]
-  },
-  "scripts": {
-  "build": "next build",
-  "export": "next export",
-  "deploy": "next build && next export"
-  },
 }
