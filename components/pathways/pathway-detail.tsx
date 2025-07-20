@@ -1,0 +1,319 @@
+
+'use client'
+
+import { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowLeft, Clock, Users, Star, Play, CheckCircle, Lock } from 'lucide-react'
+
+interface PathwayDetailProps {
+  pathway: {
+    id: number
+    title: string
+    description: string
+    category: string
+    duration: string
+    difficulty: 'beginner' | 'intermediate' | 'advanced'
+    participants: number
+    rating: number
+    image: string
+    modules: number
+    skills: string[]
+    outcomes: string[]
+  }
+}
+
+const PathwayDetail = ({ pathway }: PathwayDetailProps) => {
+  const [enrollmentStatus, setEnrollmentStatus] = useState<'not-enrolled' | 'enrolling' | 'enrolled'>('not-enrolled')
+
+  // Mock module data - in a real app, this would come from the pathway data
+  const moduleData = [
+    {
+      id: 1,
+      title: "Foundation & Strategy",
+      description: "Understanding the fundamentals and building your strategic approach",
+      duration: "2 hours",
+      lessons: 4,
+      completed: false,
+      locked: false
+    },
+    {
+      id: 2,
+      title: "Tool Selection & Setup",
+      description: "Choosing the right AI tools and setting up your workflow",
+      duration: "3 hours", 
+      lessons: 6,
+      completed: false,
+      locked: true
+    },
+    {
+      id: 3,
+      title: "Implementation & Practice",
+      description: "Hands-on practice with real-world projects and scenarios",
+      duration: "4 hours",
+      lessons: 8,
+      completed: false,
+      locked: true
+    },
+    {
+      id: 4,
+      title: "Optimization & Scaling",
+      description: "Optimizing your approach and scaling for growth",
+      duration: "3 hours",
+      lessons: 5,
+      completed: false,
+      locked: true
+    }
+  ]
+
+  const handleEnrollment = () => {
+    setEnrollmentStatus('enrolling')
+    setTimeout(() => {
+      setEnrollmentStatus('enrolled')
+    }, 2000)
+  }
+
+  const getDifficultyColor = () => {
+    switch (pathway.difficulty) {
+      case 'beginner':
+        return 'bg-green-100 text-green-800'
+      case 'intermediate':
+        return 'bg-yellow-100 text-yellow-800'
+      case 'advanced':
+        return 'bg-red-100 text-red-800'
+      default:
+        return 'bg-gray-100 text-gray-800'
+    }
+  }
+
+  return (
+    <div className="min-h-screen py-12">
+      <div className="section-container">
+        {/* Back Button */}
+        <Link
+          href="/pathways"
+          className="inline-flex items-center space-x-2 text-purple-600 hover:text-purple-700 mb-8 transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span>Back to Pathways</span>
+        </Link>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Main Content */}
+          <div className="lg:col-span-2 space-y-8">
+            {/* Header */}
+            <div className="space-y-6">
+              <div className="relative aspect-video rounded-2xl overflow-hidden">
+                <Image
+                  src={pathway.image}
+                  alt={pathway.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div>
+                <h1 className="text-3xl md:text-4xl font-bold mb-4">{pathway.title}</h1>
+                <p className="text-xl text-gray-600 leading-relaxed">{pathway.description}</p>
+              </div>
+
+              {/* Meta Info */}
+              <div className="flex flex-wrap gap-6 text-sm text-gray-500">
+                <div className="flex items-center space-x-2">
+                  <Clock className="w-4 h-4" />
+                  <span>{pathway.duration}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Users className="w-4 h-4" />
+                  <span>{pathway.participants.toLocaleString()} participants</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <span>{pathway.rating} rating</span>
+                </div>
+                <span className={`px-3 py-1 rounded-full text-xs font-medium ${getDifficultyColor()}`}>
+                  {pathway.difficulty}
+                </span>
+              </div>
+            </div>
+
+            {/* Skills Section */}
+            <div>
+              <h2 className="text-2xl font-bold mb-4">Skills You'll Learn</h2>
+              <div className="flex flex-wrap gap-3">
+                {pathway.skills.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="px-4 py-2 bg-purple-100 text-purple-700 rounded-lg font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Outcomes Section */}
+            <div>
+              <h2 className="text-2xl font-bold mb-4">What You'll Achieve</h2>
+              <div className="space-y-3">
+                {pathway.outcomes.map((outcome, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">{outcome}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Modules Section */}
+            <div>
+              <h2 className="text-2xl font-bold mb-6">Course Modules</h2>
+              <div className="space-y-4">
+                {moduleData.map((module, index) => (
+                  <div
+                    key={module.id}
+                    className={`border rounded-xl p-6 transition-all duration-200 ${
+                      module.locked && enrollmentStatus === 'not-enrolled'
+                        ? 'border-gray-200 bg-gray-50 opacity-60'
+                        : 'border-gray-200 hover:border-purple-300 hover:shadow-md'
+                    }`}
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-3 mb-2">
+                          <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
+                            module.completed
+                              ? 'bg-green-500 text-white'
+                              : module.locked && enrollmentStatus === 'not-enrolled'
+                              ? 'bg-gray-300 text-gray-500'
+                              : 'bg-purple-600 text-white'
+                          }`}>
+                            {module.completed ? (
+                              <CheckCircle className="w-4 h-4" />
+                            ) : module.locked && enrollmentStatus === 'not-enrolled' ? (
+                              <Lock className="w-4 h-4" />
+                            ) : (
+                              index + 1
+                            )}
+                          </div>
+                          <h3 className="text-lg font-semibold">{module.title}</h3>
+                        </div>
+                        
+                        <p className="text-gray-600 mb-3 ml-11">{module.description}</p>
+                        
+                        <div className="flex items-center space-x-4 text-sm text-gray-500 ml-11">
+                          <span>{module.duration}</span>
+                          <span>{module.lessons} lessons</span>
+                        </div>
+                      </div>
+
+                      {!module.locked || enrollmentStatus === 'enrolled' ? (
+                        <button className="flex items-center space-x-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+                          <Play className="w-4 h-4" />
+                          <span>Start</span>
+                        </button>
+                      ) : null}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Sidebar */}
+          <div className="space-y-6">
+            {/* Enrollment Card */}
+            <div className="bg-white rounded-2xl shadow-lg p-6 sticky top-6">
+              <div className="text-center mb-6">
+                <div className="text-3xl font-bold text-gray-900 mb-2">Free</div>
+                <div className="text-sm text-gray-500">Full access to all modules</div>
+              </div>
+
+              {enrollmentStatus === 'not-enrolled' && (
+                <button
+                  onClick={handleEnrollment}
+                  className="w-full btn-primary mb-4"
+                >
+                  Start Learning Path
+                </button>
+              )}
+
+              {enrollmentStatus === 'enrolling' && (
+                <button
+                  disabled
+                  className="w-full bg-gray-400 text-white px-6 py-3 rounded-lg font-medium mb-4 opacity-75"
+                >
+                  Enrolling...
+                </button>
+              )}
+
+              {enrollmentStatus === 'enrolled' && (
+                <button className="w-full bg-green-600 text-white px-6 py-3 rounded-lg font-medium mb-4">
+                  Continue Learning
+                </button>
+              )}
+
+              <div className="space-y-3 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Duration</span>
+                  <span className="font-medium">{pathway.duration}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Modules</span>
+                  <span className="font-medium">{pathway.modules}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Level</span>
+                  <span className="font-medium capitalize">{pathway.difficulty}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Certificate</span>
+                  <span className="font-medium">Yes</span>
+                </div>
+              </div>
+
+              <div className="border-t border-gray-200 mt-6 pt-6">
+                <h4 className="font-semibold mb-3">What's Included</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Lifetime access</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Downloadable resources</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Community access</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span>Completion certificate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Related Pathways */}
+            <div className="bg-gray-50 rounded-2xl p-6">
+              <h3 className="font-semibold mb-4">Related Pathways</h3>
+              <div className="space-y-3">
+                <Link href="/pathways/2" className="block p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+                  <div className="font-medium text-sm mb-1">AI for Career Advancement</div>
+                  <div className="text-xs text-gray-500">4 weeks • Beginner</div>
+                </Link>
+                <Link href="/pathways/3" className="block p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+                  <div className="font-medium text-sm mb-1">Content Creator's AI Toolkit</div>
+                  <div className="text-xs text-gray-500">5 weeks • Intermediate</div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default PathwayDetail
