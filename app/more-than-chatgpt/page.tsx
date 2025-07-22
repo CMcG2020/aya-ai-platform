@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Brain, Cog, Lightbulb, Sparkles, Tool, TrendingUp } from "lucide-react"
+import { Brain, Cog, Lightbulb, Sparkles, Wrench, TrendingUp } from "lucide-react"
 
 export default function MoreThanChatGPT() {
   return (
@@ -57,7 +57,7 @@ export default function MoreThanChatGPT() {
             <Card className="card-hover bg-card border-border">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Tool className="h-8 w-8 text-white" />
+                  <Wrench className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle className="text-2xl text-card-foreground">What Tools Are Available?</CardTitle>
               </CardHeader>
