@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
+import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
   title: 'Aya - AI Empowerment for Women',
@@ -34,17 +35,24 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#9333ea" />
       </head>
-      <body className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
-        <Navigation />
-        <main className="pt-16">
-          {children}
-        </main>
-        <Footer />
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navigation />
+          <main className="pt-16">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
