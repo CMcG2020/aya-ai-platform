@@ -1,4 +1,3 @@
-
 'use client'
 
 import { useEffect, useRef } from 'react'
@@ -29,7 +28,7 @@ const WelcomeGuide = () => {
     {
       icon: Lightbulb,
       title: 'What is AI?',
-      description: 'Demystify artificial intelligence. Learn about its core concepts, different types, and how it's shaping our world, explained in simple, accessible language.',
+      description: 'Demystify artificial intelligence. Learn about its core concepts, different types, and how it\'s shaping our world, explained in simple, accessible language.',
       animation: 'slide-in-left'
     },
     {
