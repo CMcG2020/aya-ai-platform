@@ -22,7 +22,7 @@ const Hero = () => {
             src="/ai-imagery.png"
             alt="Woman working confidently with AI tools"
             fill
-            className="object-cover opacity-20"
+            className="object-cover"
             priority
           />
         </div>
