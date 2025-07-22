@@ -41,7 +41,7 @@ const Hero = () => {
                 <span className="gradient-text"> Starts Here</span>
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-gray-200 leading-relaxed">
                 Discover, learn, and master AI tools with confidence. 
                 Aya empowers women to use artificial intelligence in work, home, learning, and play.
               </p>
@@ -51,15 +51,15 @@ const Hero = () => {
             <div className="flex flex-wrap gap-6">
               <div className="flex items-center space-x-2">
                 <Users className="w-5 h-5 text-purple-600" />
-                <span className="text-sm font-medium text-gray-600">10,000+ Women Empowered</span>
+                <span className="text-sm font-medium text-gray-400">10,000+ Women Empowered</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Zap className="w-5 h-5 text-purple-600" />
-                <span className="text-sm font-medium text-gray-600">50+ AI Tools Curated</span>
+                <span className="text-sm font-medium text-gray-400">50+ AI Tools Curated</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Target className="w-5 h-5 text-purple-600" />
-                <span className="text-sm font-medium text-gray-600">Personalized Learning</span>
+                <span className="text-sm font-medium text-gray-400">Personalized Learning</span>
               </div>
             </div>
 
@@ -89,7 +89,7 @@ const Hero = () => {
             </div>
             
             {/* Floating Cards */}
-            <div className="absolute -top-6 -left-6 bg-white p-4 rounded-xl shadow-lg">
+            <div className="absolute -top-6 -left-6 bg-background p-4 rounded-xl shadow-lg">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
                 <div>
@@ -99,7 +99,7 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+            <div className="absolute -bottom-6 -right-6 bg-background p-4 rounded-xl shadow-lg">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
                 <div>

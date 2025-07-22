@@ -54,14 +54,14 @@ const Testimonials = () => {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50" ref={testimonialsRef}>
+    <section className="py-20" ref={testimonialsRef}>
       <div className="section-container">
         <div className="text-center mb-16 fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Success Stories from
             <span className="gradient-text"> Amazing Women</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             See how women like you are using AI to transform their careers, 
             businesses, and daily lives with confidence and success.
           </p>
@@ -71,7 +71,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="fade-in bg-white rounded-2xl p-8 shadow-lg card-hover"
+              className="fade-in bg-background rounded-2xl p-8 shadow-lg card-hover"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Quote Icon */}
@@ -87,7 +87,7 @@ const Testimonials = () => {
               </div>
 
               {/* Quote */}
-              <p className="text-gray-700 mb-8 leading-relaxed italic">
+              <p className="text-gray-400 mb-8 leading-relaxed italic">
                 "{testimonial.quote}"
               </p>
 
@@ -102,8 +102,8 @@ const Testimonials = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  <h4 className="font-semibold text-white">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-400">{testimonial.role}</p>
                   <p className="text-sm text-purple-600">{testimonial.company}</p>
                 </div>
               </div>

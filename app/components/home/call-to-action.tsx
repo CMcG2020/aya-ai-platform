@@ -5,6 +5,7 @@ import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Sparkles, CheckCircle } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 const CallToAction = () => {
   const ctaRef = useRef<HTMLDivElement>(null)
@@ -36,7 +37,7 @@ const CallToAction = () => {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white relative overflow-hidden" ref={ctaRef}>
+    <section className="py-20 text-white relative overflow-hidden" ref={ctaRef}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10">
@@ -83,19 +84,17 @@ const CallToAction = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              <Link
-                href="/quiz"
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-all duration-300 hover:scale-105 inline-flex items-center justify-center"
-              >
-                Start Your Journey
-                <ArrowRight className="ml-2 w-5 h-5" />
+              <Link href="/quiz">
+                <Button size="lg">
+                  Start Your Journey
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
               </Link>
               
-              <Link
-                href="/discovery"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 inline-flex items-center justify-center"
-              >
-                Explore Platform
+              <Link href="/discovery">
+                <Button variant="outline" size="lg">
+                  Explore Platform
+                </Button>
               </Link>
             </div>
           </div>

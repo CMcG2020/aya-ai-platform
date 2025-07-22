@@ -71,14 +71,14 @@ const Features = () => {
   ]
 
   return (
-    <section className="py-20 bg-white" ref={featuresRef}>
+    <section className="py-20" ref={featuresRef}>
       <div className="section-container">
         <div className="text-center mb-16 fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Everything You Need to
             <span className="gradient-text"> Master AI</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             From discovery to mastery, Aya provides a complete ecosystem of tools, 
             resources, and guidance tailored specifically for women entering the AI space.
           </p>
@@ -92,7 +92,7 @@ const Features = () => {
             return (
               <div
                 key={feature.title}
-                className={`card-hover bg-gray-50 rounded-2xl p-8 ${animationClass}`}
+                className={`card-hover bg-background rounded-2xl p-8 ${animationClass}`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className={`w-14 h-14 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
@@ -100,7 +100,7 @@ const Features = () => {
                 </div>
                 
                 <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
+                <p className="text-gray-400 mb-6 leading-relaxed">{feature.description}</p>
                 
                 <a
                   href={feature.href}
