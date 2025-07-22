@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full">
           <Image
-            src="https://img.freepik.com/premium-photo/woman-smiling-while-working-laptop-bright-modern-office-environment_132358-57910.jpg"
+            src="/ai-imagery.png"
             alt="Woman working confidently with AI tools"
             fill
             className="object-cover opacity-20"
