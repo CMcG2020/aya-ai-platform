@@ -14,22 +14,16 @@ const Hero = () => {
   }, [])
 
   return (
-    <section className="hero-section parallax-bg relative">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-15">
-        <div className="relative w-full h-full">
-          <Image
-            src="/ai-imagery.png"
-            alt="Woman working confidently with AI tools"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-      </div>
-
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-pink-900/20 z-10"></div>
+    <section
+  className="hero-section bg-gradient-to-br from-purple-900 via-purple-800 to-pink-800 text-white"
+  style={{
+    backgroundImage: `url('/ai-imagery.png')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundBlendMode: 'overlay'
+  }}
+>
+      
 
       <div className="section-container relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
