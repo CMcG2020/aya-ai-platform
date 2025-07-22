@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <section className="hero-section parallax-bg relative">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-15">
         <div className="relative w-full h-full">
           <Image
             src="/ai-imagery.png"
