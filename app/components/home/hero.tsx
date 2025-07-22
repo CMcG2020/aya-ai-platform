@@ -14,15 +14,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <section
-  className="hero-section bg-gradient-to-br from-purple-900 via-purple-800 to-pink-800 text-white"
-  style={{
-    backgroundImage: `url('/ai-imagery.png')`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundBlendMode: 'overlay'
-  }}
->
+    <section className="hero-section bg-gradient-to-br from-purple-900 via-purple-800 to-pink-800 text-white">
       
 
       <div className="section-container relative z-20">
