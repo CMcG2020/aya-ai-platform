@@ -136,7 +136,7 @@
 
   .hero-section {
     @apply min-h-screen flex items-center justify-center relative overflow-hidden;
-    background-image: url('/ai-imagery.png');
+    background-image: url('/aya-ai-platform/ai-imagery.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
