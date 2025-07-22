@@ -6,7 +6,7 @@ import Footer from '@/components/footer'
 
 export const metadata: Metadata = {
   title: 'Aya - AI Empowerment for Women',
-  description: 'Discover, learn, and master AI tools with confidence. Aya empowers women to use artificial intelligence in work, home, learning, and play.',
+  description: 'Discover, learn, and master AI with confidence. The goal of this platform is to empower women to use artificial intelligence in work, home, learning, and play.',
   keywords: 'AI, artificial intelligence, women, empowerment, tools, learning, technology',
   authors: [{ name: 'Aya Platform' }],
   openGraph: {
