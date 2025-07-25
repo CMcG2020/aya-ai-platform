@@ -26,3 +26,13 @@ export type DateRange = {
   from: Date | undefined
   to: Date | undefined
 }
+
+export interface Course {
+  title: string;
+  image: string;
+  platform: string;
+  length: string;
+  summary: string;
+  link: string;
+  difficulty: "beginner" | "intermediate" | "advanced";
+}

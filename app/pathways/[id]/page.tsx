@@ -11,12 +11,12 @@ interface PathwayPageProps {
 
 export async function generateStaticParams() {
   return pathways.map((pathway) => ({
-    id: pathway.id.toString(),
+    id: pathway.id,
   }))
 }
 
 export async function generateMetadata({ params }: PathwayPageProps) {
-  const pathway = pathways.find(p => p.id === parseInt(params.id))
+  const pathway = pathways.find(p => p.id === params.id)
   
   if (!pathway) {
     return {
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PathwayPageProps) {
 }
 
 export default function PathwayPage({ params }: PathwayPageProps) {
-  const pathway = pathways.find(p => p.id === parseInt(params.id))
+  const pathway = pathways.find(p => p.id === params.id)
 
   if (!pathway) {
     notFound()

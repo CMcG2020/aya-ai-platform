@@ -20,6 +20,7 @@ interface PathwayCardProps {
     modules: number
     skills: string[]
     outcomes: string[]
+    link: string
   }
   index: number
 }
@@ -183,7 +184,7 @@ const PathwayCard = ({ pathway, index }: PathwayCardProps) => {
 
         {/* CTA */}
         <Link
-          href={`/pathways/${pathway.id}`}
+          href={pathway.link}
           className="w-full btn-primary flex items-center justify-center"
         >
           Start Pathway
