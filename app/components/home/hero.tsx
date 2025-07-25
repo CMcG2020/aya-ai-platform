@@ -1,4 +1,3 @@
-
 'use client'
 
 import { useEffect, useState } from 'react'
@@ -14,15 +13,26 @@ const Hero = () => {
   }, [])
 
   return (
-    <section className="hero-section bg-gradient-to-br from-purple-900 via-purple-800 to-pink-800 text-white">
-      
+    <section className="hero-section relative min-h-screen overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/ai-imagery.png"
+          alt="AI Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-purple-800/70 to-pink-800/80"></div>
+      </div>
 
       <div className="section-container relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className={`space-y-8 ${isVisible ? 'fade-in visible' : 'fade-in'}`}>
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white">
                 Your AI Journey
                 <span className="gradient-text"> Starts Here</span>
               </h1>
@@ -36,16 +46,16 @@ const Hero = () => {
             {/* Stats */}
             <div className="flex flex-wrap gap-6">
               <div className="flex items-center space-x-2">
-                <Users className="w-5 h-5 text-purple-600" />
-                <span className="text-sm font-medium text-gray-400">10,000+ Women Empowered</span>
+                <Users className="w-5 h-5 text-purple-400" />
+                <span className="text-sm font-medium text-gray-300">10,000+ Women Empowered</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Zap className="w-5 h-5 text-purple-600" />
-                <span className="text-sm font-medium text-gray-400">50+ AI Tools Curated</span>
+                <Zap className="w-5 h-5 text-purple-400" />
+                <span className="text-sm font-medium text-gray-300">50+ AI Tools Curated</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Target className="w-5 h-5 text-purple-600" />
-                <span className="text-sm font-medium text-gray-400">Personalized Learning</span>
+                <Target className="w-5 h-5 text-purple-400" />
+                <span className="text-sm font-medium text-gray-300">Personalized Learning</span>
               </div>
             </div>
 
@@ -75,22 +85,22 @@ const Hero = () => {
             </div>
             
             {/* Floating Cards */}
-            <div className="absolute -top-6 -left-6 bg-background p-4 rounded-xl shadow-lg">
+            <div className="absolute -top-6 -left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
                 <div>
-                  <p className="font-semibold text-sm">AI Writing Assistant</p>
-                  <p className="text-xs text-gray-500">Boost productivity</p>
+                  <p className="font-semibold text-sm text-gray-800">AI Writing Assistant</p>
+                  <p className="text-xs text-gray-600">Boost productivity</p>
                 </div>
               </div>
             </div>
             
-            <div className="absolute -bottom-6 -right-6 bg-background p-4 rounded-xl shadow-lg">
+            <div className="absolute -bottom-6 -right-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
                 <div>
-                  <p className="font-semibold text-sm">Smart Analytics</p>
-                  <p className="text-xs text-gray-500">Data insights</p>
+                  <p className="font-semibold text-sm text-gray-800">Smart Analytics</p>
+                  <p className="text-xs text-gray-600">Data insights</p>
                 </div>
               </div>
             </div>
