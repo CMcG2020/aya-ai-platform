@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Play, Users, Zap, Target } from 'lucide-react'
+import { ArrowRight, Play } from 'lucide-react'
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -34,29 +34,12 @@ const Hero = () => {
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white">
                 Your AI Journey
-                <span className="gradient-text"> Starts Here</span>
+                <span className="bg-gradient-to-r from-purple-300 to-purple-500 bg-clip-text text-transparent"> Starts Here</span>
               </h1>
               
               <p className="text-xl text-gray-200 leading-relaxed">
-                Discover, learn, and master AI tools with confidence. 
-                Aya empowers women to use artificial intelligence in work, home, learning, and play.
+                Simplifying the tech world and making AI less intimidating. Aya gathers all the essential AI resources in one place, making it easier for women to confidently integrate artificial intelligence into their everyday lives - from work and home to learning and personal growth.
               </p>
-            </div>
-
-            {/* Stats */}
-            <div className="flex flex-wrap gap-6">
-              <div className="flex items-center space-x-2">
-                <Users className="w-5 h-5 text-purple-400" />
-                <span className="text-sm font-medium text-gray-300">10,000+ Women Empowered</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Zap className="w-5 h-5 text-purple-400" />
-                <span className="text-sm font-medium text-gray-300">50+ AI Tools Curated</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Target className="w-5 h-5 text-purple-400" />
-                <span className="text-sm font-medium text-gray-300">Personalized Learning</span>
-              </div>
             </div>
 
             {/* CTA Buttons */}
@@ -89,7 +72,7 @@ const Hero = () => {
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
                 <div>
-                  <p className="font-semibold text-sm text-gray-800">AI Writing Assistant</p>
+                  <p className="font-semibold text-sm text-gray-800">Understanding AI</p>
                   <p className="text-xs text-gray-600">Boost productivity</p>
                 </div>
               </div>
@@ -99,8 +82,8 @@ const Hero = () => {
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
                 <div>
-                  <p className="font-semibold text-sm text-gray-800">Smart Analytics</p>
-                  <p className="text-xs text-gray-600">Data insights</p>
+                  <p className="font-semibold text-sm text-gray-800">Why should I care?</p>
+                  <p className="text-xs text-gray-600">Get insights</p>
                 </div>
               </div>
             </div>
