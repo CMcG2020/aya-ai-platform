@@ -1,123 +1,301 @@
+export interface Course {
+  title: string;
+  image: string;
+  platform: string;
+  length: string;
+  summary: string;
+  link: string;
+}
 
-export const pathways = [
+export interface PathwaySection {
+  section: string;
+  id: string;
+  courses: Course[];
+}
+
+export const pathways: PathwaySection[] = [
   {
-    id: 1,
-    title: "Launch Your AI-Powered Side Hustle",
-    description: "Learn to identify opportunities, validate ideas, and build a profitable side business using AI tools. Perfect for entrepreneurs looking to leverage technology for competitive advantage.",
-    category: "business",
-    duration: "6 weeks",
-    difficulty: "intermediate" as const,
-    participants: 2847,
-    rating: 4.8,
-    image: "https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/V1xq1AADx/videoblocks-woman-entrepreneur-working-on-laptop-at-co-working-office-or-library-looks-smart-bookshelves-knowledge-and-self-development_b6bdsmkn7_thumbnail-1080_01.png",
-    modules: 8,
-    skills: ["Market research with AI", "Product validation", "AI automation", "Customer acquisition", "Financial planning"],
-    outcomes: [
-      "Validated business idea with market research",
-      "Automated workflows to save 10+ hours weekly", 
-      "Customer acquisition system using AI tools",
-      "Revenue projections and financial planning",
-      "Scalable business model ready for growth"
+    section: "Foundational AI Courses",
+    id: "foundational-ai",
+    courses: [
+      {
+        title: "AI For Everyone",
+        image: "/images/ai-for-everyone.jpg",
+        platform: "DeepLearning.AI (Coursera)",
+        length: "4 weeks",
+        summary: "Non-technical introduction to AI concepts, perfect for beginners across all industries",
+        link: "https://www.coursera.org/learn/ai-for-everyone"
+      },
+      {
+        title: "Google AI Essentials",
+        image: "/images/google-ai-essentials.jpg",
+        platform: "Google (Coursera)",
+        length: "10 hours",
+        summary: "Covers prompt engineering, generative AI, and practical AI applications",
+        link: "https://www.coursera.org/learn/google-ai-essentials"
+      },
+      {
+        title: "IBM AI Foundations for Everyone",
+        image: "/images/ibm-ai-foundations.jpg",
+        platform: "IBM (Coursera)",
+        length: "3 months",
+        summary: "Comprehensive specialization covering AI fundamentals and practical applications",
+        link: "https://www.coursera.org/specializations/ai-foundations-for-everyone"
+      }
     ]
   },
   {
-    id: 2,
-    title: "AI for Career Advancement",
-    description: "Strategically integrate AI skills into your current role to become indispensable. Learn to position yourself as an AI champion in your organization.",
-    category: "career",
-    duration: "4 weeks",
-    difficulty: "beginner" as const,
-    participants: 1924,
-    rating: 4.7,
-    image: "https://thumbs.dreamstime.com/x/business-woman-presenting-strategy-to-colleagues-modern-office-business-woman-presenting-strategy-to-colleagues-modern-275290122.jpg",
-    modules: 6,
-    skills: ["AI tool assessment", "Change management", "Process optimization", "Stakeholder communication", "ROI measurement"],
-    outcomes: [
-      "Personal AI skills audit and development plan",
-      "Identified 3-5 processes for AI optimization",
-      "Business case for AI adoption in your role",
-      "Network of AI champions in your industry",
-      "Concrete achievements to showcase in reviews"
+    section: "Advanced AI & ML",
+    id: "advanced-ai-ml",
+    courses: [
+      {
+        title: "Machine Learning Specialization",
+        image: "/images/ml-specialization.jpg",
+        platform: "Stanford/DeepLearning.AI (Coursera)",
+        length: "3 months",
+        summary: "Industry-standard course for hands-on ML development",
+        link: "https://www.coursera.org/specializations/machine-learning-introduction"
+      },
+      {
+        title: "IBM AI Engineering Professional Certificate",
+        image: "/images/ibm-ai-engineering.jpg",
+        platform: "IBM (Coursera)",
+        length: "6 months",
+        summary: "Advanced program covering deep learning, PyTorch, and TensorFlow",
+        link: "https://www.coursera.org/professional-certificates/ai-engineer"
+      }
     ]
   },
   {
-    id: 3,
-    title: "Content Creator's AI Toolkit",
-    description: "Master AI tools for content creation across all platforms. From ideation to production, learn to create compelling content at scale while maintaining authenticity.",
-    category: "skills",
-    duration: "5 weeks",
-    difficulty: "intermediate" as const,
-    participants: 3156,
-    rating: 4.9,
-    image: "https://www.nogentech.org/wp-content/uploads/2023/03/AI-Writing-Tools-to-Generate-Creative-Content-Ideas.png",
-    modules: 7,
-    skills: ["Content strategy with AI", "Visual content creation", "Video editing automation", "SEO optimization", "Brand voice consistency"],
-    outcomes: [
-      "90-day content calendar with AI assistance",
-      "Streamlined content production workflow",
-      "Increased engagement rates by 40%+",
-      "Personal brand strengthened across platforms",
-      "Monetization strategies implemented"
+    section: "Data Science & Analytics",
+    id: "data-science-analytics",
+    courses: [
+      {
+        title: "Google Data Analytics Professional Certificate",
+        image: "/images/google-data-analytics.jpg",
+        platform: "Google (Coursera)",
+        length: "6 months",
+        summary: "Complete pathway from beginner to job-ready data analyst",
+        link: "https://www.coursera.org/professional-certificates/google-data-analytics"
+      },
+      {
+        title: "IBM Data Science Professional Certificate",
+        image: "/images/ibm-data-science.jpg",
+        platform: "IBM (Coursera)",
+        length: "11 months",
+        summary: "Comprehensive program covering Python, SQL, and machine learning",
+        link: "https://www.coursera.org/professional-certificates/ibm-data-science"
+      },
+      {
+        title: "Data Analysis with Python",
+        image: "/images/datacamp-python.jpg",
+        platform: "DataCamp",
+        length: "4 hours",
+        summary: "Hands-on approach to data analysis and visualization",
+        link: "https://www.datacamp.com/courses/data-analysis-with-python"
+      }
     ]
   },
   {
-    id: 4,
-    title: "Data-Driven Decision Making",
-    description: "Transform raw data into actionable insights using AI. Perfect for managers, analysts, and anyone who needs to make informed decisions based on data.",
-    category: "skills",
-    duration: "5 weeks",
-    difficulty: "advanced" as const,
-    participants: 1542,
-    rating: 4.6,
-    image: "https://thumbs.dreamstime.com/z/data-analysis-dashboard-complex-visualizations-displayed-dual-monitors-office-setting-professional-workspace-328225456.jpg?w=992",
-    modules: 8,
-    skills: ["Data analysis with AI", "Predictive modeling", "Visualization best practices", "Statistical interpretation", "Report automation"],
-    outcomes: [
-      "Automated reporting system saving 15+ hours monthly",
-      "Predictive models for key business metrics",
-      "Executive-ready data presentations",
-      "Confidence in statistical analysis",
-      "Data-driven recommendations implemented"
+    section: "Programming & Software Development",
+    id: "programming-development",
+    courses: [
+      {
+        title: "Python Programming for Beginners",
+        image: "/images/python-beginners.jpg",
+        platform: "Various Platforms",
+        length: "8-12 weeks",
+        summary: "Essential programming language for AI and data science",
+        link: "https://www.python.org/about/gettingstarted/"
+      },
+      {
+        title: "JavaScript for Beginners",
+        image: "/images/javascript-beginners.jpg",
+        platform: "Various Platforms",
+        length: "6-10 weeks",
+        summary: "Critical for web development and modern applications",
+        link: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript"
+      },
+      {
+        title: "Full Stack Development Bootcamp",
+        image: "/images/coding-black-females.jpg",
+        platform: "Coding Black Females",
+        length: "12-24 weeks",
+        summary: "Comprehensive program designed specifically for Black women in tech",
+        link: "https://codingblackfemales.com/"
+      }
     ]
   },
   {
-    id: 5,
-    title: "AI-Enhanced Customer Experience",
-    description: "Revolutionize how you interact with customers using AI. Learn to implement chatbots, personalization, and predictive customer service.",
-    category: "business",
-    duration: "4 weeks",
-    difficulty: "intermediate" as const,
-    participants: 987,
-    rating: 4.5,
-    image: "https://global-uploads.webflow.com/601be0f0f62d8b2e2a92b830/64c131654b7b8bb6475d3fb2_customer-service-ai.png",
-    modules: 6,
-    skills: ["Chatbot development", "Customer journey mapping", "Personalization strategies", "Sentiment analysis", "Customer retention"],
-    outcomes: [
-      "Implemented AI chatbot reducing response time by 70%",
-      "Personalized customer experience framework",
-      "Customer satisfaction scores improved by 25%+",
-      "Automated customer segmentation system",
-      "Predictive customer service protocols"
+    section: "UX/UI Design",
+    id: "ux-ui-design",
+    courses: [
+      {
+        title: "CareerFoundry UX Design Program",
+        image: "/images/careerfoundry-ux.jpg",
+        platform: "CareerFoundry",
+        length: "5-10 months",
+        summary: "Complete career-change program with job guarantee",
+        link: "https://careerfoundry.com/en/courses/become-a-ux-designer/"
+      },
+      {
+        title: "Google UX Design Certificate",
+        image: "/images/google-ux-design.jpg",
+        platform: "Google (Coursera)",
+        length: "6 months",
+        summary: "Industry-recognized credential for UX design",
+        link: "https://www.coursera.org/professional-certificates/google-ux-design"
+      },
+      {
+        title: "UX Academy Beginner Course",
+        image: "/images/ux-academy.jpg",
+        platform: "UX Academy",
+        length: "8 weeks",
+        summary: "Live online classes with small class sizes",
+        link: "https://uxacademy.com/"
+      }
     ]
   },
   {
-    id: 6,
-    title: "Remote Work Optimization with AI",
-    description: "Master the art of productive remote work using AI tools. Perfect for remote workers, freelancers, and distributed teams.",
-    category: "career",
-    duration: "3 weeks",
-    difficulty: "beginner" as const,
-    participants: 2198,
-    rating: 4.8,
-    image: "https://thumbs.dreamstime.com/z/vector-illustration-woman-working-efficiently-her-home-office-setup-surrounded-computer-desk-other-cozy-home-310361950.jpg?w=768",
-    modules: 5,
-    skills: ["Productivity automation", "Communication optimization", "Time management", "Virtual collaboration", "Work-life balance"],
-    outcomes: [
-      "Personalized productivity system increasing efficiency by 30%",
-      "Automated routine tasks and communications",
-      "Improved virtual meeting effectiveness",
-      "Better work-life balance with AI assistance",
-      "Enhanced remote team collaboration"
+    section: "Cybersecurity",
+    id: "cybersecurity",
+    courses: [
+      {
+        title: "Google Cybersecurity Professional Certificate",
+        image: "/images/google-cybersecurity.jpg",
+        platform: "Google (Coursera)",
+        length: "6 months",
+        summary: "Comprehensive program covering threat detection, incident response, and security tools",
+        link: "https://www.coursera.org/professional-certificates/google-cybersecurity"
+      },
+      {
+        title: "IBM Cybersecurity Analyst Professional Certificate",
+        image: "/images/ibm-cybersecurity.jpg",
+        platform: "IBM (Coursera)",
+        length: "8 months",
+        summary: "Hands-on training in cybersecurity analysis and threat hunting",
+        link: "https://www.coursera.org/professional-certificates/ibm-cybersecurity-analyst"
+      },
+      {
+        title: "EC-Council Essentials Series",
+        image: "/images/ec-council.jpg",
+        platform: "EC-Council (Free)",
+        length: "Self-paced",
+        summary: "Free courses in ethical hacking, network defense, and digital forensics",
+        link: "https://www.eccouncil.org/programs/computer-hacking-forensic-investigator-chfi/"
+      }
+    ]
+  },
+  {
+    section: "Cloud Computing & DevOps",
+    id: "cloud-devops",
+    courses: [
+      {
+        title: "AWS Fundamentals Specialization",
+        image: "/images/aws-fundamentals.jpg",
+        platform: "Amazon Web Services (Coursera)",
+        length: "4 months",
+        summary: "Essential cloud computing skills for modern tech careers",
+        link: "https://www.coursera.org/specializations/aws-fundamentals"
+      },
+      {
+        title: "Google Cloud Professional Certificates",
+        image: "/images/google-cloud.jpg",
+        platform: "Google Cloud (Coursera)",
+        length: "3-6 months",
+        summary: "Industry-recognized cloud computing credentials",
+        link: "https://cloud.google.com/certification"
+      },
+      {
+        title: "Microsoft Azure Fundamentals",
+        image: "/images/azure-fundamentals.jpg",
+        platform: "Microsoft (Microsoft Learn)",
+        length: "Self-paced",
+        summary: "Microsoft's cloud platform essentials",
+        link: "https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/"
+      }
+    ]
+  },
+  {
+    section: "Product Management & Business",
+    id: "product-management",
+    courses: [
+      {
+        title: "IBM AI Product Manager Professional Certificate",
+        image: "/images/ibm-ai-product.jpg",
+        platform: "IBM (Coursera)",
+        length: "6 months",
+        summary: "Specialized program for AI product management",
+        link: "https://www.coursera.org/professional-certificates/ibm-ai-product-manager"
+      },
+      {
+        title: "Essential Product Management",
+        image: "/images/products-that-count.jpg",
+        platform: "Products That Count (Free)",
+        length: "Self-paced",
+        summary: "Free comprehensive product management training",
+        link: "https://www.productsthatcount.com/"
+      },
+      {
+        title: "AI For Business Specialization",
+        image: "/images/ai-business-upenn.jpg",
+        platform: "University of Pennsylvania (Coursera)",
+        length: "4 months",
+        summary: "Strategic AI implementation for business leaders",
+        link: "https://www.coursera.org/specializations/ai-for-business-wharton"
+      }
+    ]
+  },
+  {
+    section: "Specialized Tech Skills",
+    id: "specialized-tech",
+    courses: [
+      {
+        title: "Digital Marketing Professional Certificate",
+        image: "/images/google-digital-marketing.jpg",
+        platform: "Google (Coursera)",
+        length: "6 months",
+        summary: "Essential digital marketing skills for tech careers",
+        link: "https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce"
+      },
+      {
+        title: "Project Management Professional (PMP) Prep",
+        image: "/images/pmp-prep.jpg",
+        platform: "Various Platforms",
+        length: "3-6 months",
+        summary: "Critical project management skills for tech leadership",
+        link: "https://www.pmi.org/certifications/project-management-pmp"
+      }
+    ]
+  },
+  {
+    section: "Women-Focused Tech Programs",
+    id: "women-focused",
+    courses: [
+      {
+        title: "allWomen Academy",
+        image: "/images/allwomen-academy.jpg",
+        platform: "allWomen Academy",
+        length: "3-6 months",
+        summary: "Specialized programs in Data Science, Data Analytics, UX/UI, and Product Management specifically for women",
+        link: "https://allwomen.tech/"
+      },
+      {
+        title: "Hackbright Academy",
+        image: "/images/hackbright.jpg",
+        platform: "Hackbright Academy",
+        length: "12-24 weeks",
+        summary: "Female-focused software engineering bootcamp",
+        link: "https://hackbrightacademy.com/"
+      },
+      {
+        title: "Women in Tech Network Courses",
+        image: "/images/women-in-tech.jpg",
+        platform: "Women in Tech Network",
+        length: "Varies",
+        summary: "Various tech courses designed specifically for women's career advancement",
+        link: "https://www.womenintechnetwork.com/"
+      }
     ]
   }
-]
+];
