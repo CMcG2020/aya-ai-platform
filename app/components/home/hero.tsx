@@ -34,7 +34,7 @@ const Hero = () => {
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white">
                 Your AI Journey
-                <span className="bg-gradient-to-r from-purple-300 to-purple-500 bg-clip-text text-transparent"> Starts Here</span>
+                <span className="text-white"> Starts Here</span>
               </h1>
               
               <p className="text-xl text-gray-200 leading-relaxed">
