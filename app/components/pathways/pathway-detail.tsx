@@ -1,70 +1,30 @@
-
 'use client'
 
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, Clock, Users, Star, Play, CheckCircle, Lock } from 'lucide-react'
+import { PathwaySection } from '@/lib/pathways-data'
+import { Course } from '@/lib/types'
 
 interface PathwayDetailProps {
-  pathway: {
-    id: number
-    title: string
-    description: string
-    category: string
-    duration: string
-    difficulty: 'beginner' | 'intermediate' | 'advanced'
-    participants: number
-    rating: number
-    image: string
-    modules: number
-    skills: string[]
-    outcomes: string[]
-  }
+  pathway: PathwaySection & { courses: Course[] }
 }
 
 const PathwayDetail = ({ pathway }: PathwayDetailProps) => {
   const [enrollmentStatus, setEnrollmentStatus] = useState<'not-enrolled' | 'enrolling' | 'enrolled'>('not-enrolled')
 
   // Mock module data - in a real app, this would come from the pathway data
-  const moduleData = [
-    {
-      id: 1,
-      title: "Foundation & Strategy",
-      description: "Understanding the fundamentals and building your strategic approach",
-      duration: "2 hours",
-      lessons: 4,
+  const moduleData = pathway.courses.map((course, index) => ({
+      id: index + 1,
+      title: course.title,
+      description: course.summary,
+      duration: course.length,
+      lessons: 4, // placeholder
       completed: false,
-      locked: false
-    },
-    {
-      id: 2,
-      title: "Tool Selection & Setup",
-      description: "Choosing the right AI tools and setting up your workflow",
-      duration: "3 hours", 
-      lessons: 6,
-      completed: false,
-      locked: true
-    },
-    {
-      id: 3,
-      title: "Implementation & Practice",
-      description: "Hands-on practice with real-world projects and scenarios",
-      duration: "4 hours",
-      lessons: 8,
-      completed: false,
-      locked: true
-    },
-    {
-      id: 4,
-      title: "Optimization & Scaling",
-      description: "Optimizing your approach and scaling for growth",
-      duration: "3 hours",
-      lessons: 5,
-      completed: false,
-      locked: true
-    }
-  ]
+      locked: index > 0,
+  }));
+
 
   const handleEnrollment = () => {
     setEnrollmentStatus('enrolling')
@@ -74,7 +34,9 @@ const PathwayDetail = ({ pathway }: PathwayDetailProps) => {
   }
 
   const getDifficultyColor = () => {
-    switch (pathway.difficulty) {
+    // Use difficulty of the first course as representative
+    const difficulty = pathway.courses[0]?.difficulty || 'beginner';
+    switch (difficulty) {
       case 'beginner':
         return 'bg-green-100 text-green-800'
       case 'intermediate':
@@ -84,6 +46,11 @@ const PathwayDetail = ({ pathway }: PathwayDetailProps) => {
       default:
         return 'bg-gray-100 text-gray-800'
     }
+  }
+
+  const representativeCourse = pathway.courses[0];
+  if (!representativeCourse) {
+    return <div>Pathway data is missing.</div>;
   }
 
   return (
@@ -105,34 +72,34 @@ const PathwayDetail = ({ pathway }: PathwayDetailProps) => {
             <div className="space-y-6">
               <div className="relative aspect-video rounded-2xl overflow-hidden">
                 <Image
-                  src={pathway.image}
-                  alt={pathway.title}
+                  src={representativeCourse.image}
+                  alt={pathway.section}
                   fill
                   className="object-cover"
                 />
               </div>
 
               <div>
-                <h1 className="text-3xl md:text-4xl font-bold mb-4">{pathway.title}</h1>
-                <p className="text-xl text-gray-600 leading-relaxed">{pathway.description}</p>
+                <h1 className="text-3xl md:text-4xl font-bold mb-4">{pathway.section}</h1>
+                <p className="text-xl text-gray-600 leading-relaxed">{representativeCourse.summary}</p>
               </div>
 
               {/* Meta Info */}
               <div className="flex flex-wrap gap-6 text-sm text-gray-500">
                 <div className="flex items-center space-x-2">
                   <Clock className="w-4 h-4" />
-                  <span>{pathway.duration}</span>
+                  <span>{representativeCourse.length}</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Users className="w-4 h-4" />
-                  <span>{pathway.participants.toLocaleString()} participants</span>
+                  <span>1,234 participants</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                  <span>{pathway.rating} rating</span>
+                  <span>4.5 rating</span>
                 </div>
                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${getDifficultyColor()}`}>
-                  {pathway.difficulty}
+                  {representativeCourse.difficulty}
                 </span>
               </div>
             </div>
@@ -141,12 +108,12 @@ const PathwayDetail = ({ pathway }: PathwayDetailProps) => {
             <div>
               <h2 className="text-2xl font-bold mb-4">Skills You'll Learn</h2>
               <div className="flex flex-wrap gap-3">
-                {pathway.skills.map((skill, index) => (
+                {pathway.courses.map((course, index) => (
                   <span
                     key={index}
                     className="px-4 py-2 bg-purple-100 text-purple-700 rounded-lg font-medium"
                   >
-                    {skill}
+                    {course.title}
                   </span>
                 ))}
               </div>
@@ -156,10 +123,10 @@ const PathwayDetail = ({ pathway }: PathwayDetailProps) => {
             <div>
               <h2 className="text-2xl font-bold mb-4">What You'll Achieve</h2>
               <div className="space-y-3">
-                {pathway.outcomes.map((outcome, index) => (
+                {pathway.courses.map((course, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">{outcome}</span>
+                    <span className="text-gray-700">{`Completion of ${course.title}`}</span>
                   </div>
                 ))}
               </div>
@@ -256,15 +223,15 @@ const PathwayDetail = ({ pathway }: PathwayDetailProps) => {
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Duration</span>
-                  <span className="font-medium">{pathway.duration}</span>
+                  <span className="font-medium">{representativeCourse.length}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Modules</span>
-                  <span className="font-medium">{pathway.modules}</span>
+                  <span className="font-medium">{pathway.courses.length}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Level</span>
-                  <span className="font-medium capitalize">{pathway.difficulty}</span>
+                  <span className="font-medium capitalize">{representativeCourse.difficulty}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Certificate</span>

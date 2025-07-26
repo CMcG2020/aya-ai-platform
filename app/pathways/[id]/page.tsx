@@ -25,8 +25,7 @@ export async function generateMetadata({ params }: PathwayPageProps) {
   }
 
   return {
-    title: `${pathway.title} | Aya Learning Pathways`,
-    description: pathway.description,
+    title: `${pathway.section} | Aya Learning Pathways`,
   }
 }
 
