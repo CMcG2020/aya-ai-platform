@@ -12,14 +12,14 @@ export default function PathwaysPage() {
     : pathways.filter(pathway => pathway.id === activeSection);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 py-12">
+    <div className="min-h-screen bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Learning <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Pathways</span>
+          <h1 className="text-4xl font-bold text-white mb-4">
+            Learning <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">Pathways</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Structured learning roadmaps to advance your career in AI and technology. 
             Choose your path and start building the skills that matter.
           </p>
@@ -32,7 +32,7 @@ export default function PathwaysPage() {
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
               activeSection === 'all'
                 ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'
             }`}
           >
             All Courses
@@ -44,7 +44,7 @@ export default function PathwaysPage() {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                 activeSection === pathway.id
                   ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'
               }`}
             >
               {pathway.section}
@@ -56,7 +56,7 @@ export default function PathwaysPage() {
         <div className="space-y-16">
           {filteredPathways.map((pathway) => (
             <section key={pathway.id} id={pathway.id}>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 {pathway.section}
               </h2>
               
@@ -65,22 +65,22 @@ export default function PathwaysPage() {
                 {pathway.courses.map((course, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                    className="bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
                   >
                     {/* Course Image */}
-                    <div className="relative h-48 bg-gradient-to-br from-purple-100 to-pink-100 overflow-hidden">
+                    <div className="relative h-48 bg-gray-700 overflow-hidden">
                       <img
                         src={course.image}
                         alt={course.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-75 group-hover:opacity-100"
                         onError={(e) => {
                           // Fallback to gradient background if image fails to load
                           e.currentTarget.style.display = 'none';
                         }}
                       />
                       {/* Fallback gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-pink-400/20 flex items-center justify-center">
-                        <div className="text-center text-gray-600">
+                      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-pink-900/30 flex items-center justify-center">
+                        <div className="text-center text-gray-300">
                           <Building className="w-12 h-12 mx-auto mb-2 opacity-50" />
                           <p className="text-sm font-medium">{course.platform.split(' ')[0]}</p>
                         </div>
@@ -89,11 +89,11 @@ export default function PathwaysPage() {
 
                     {/* Course Content */}
                     <div className="p-6 flex flex-col h-64">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
+                      <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">
                         {course.title}
                       </h3>
                       
-                      <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                      <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
                         <div className="flex items-center gap-1">
                           <Building className="w-4 h-4" />
                           <span className="truncate">{course.platform}</span>
@@ -104,7 +104,7 @@ export default function PathwaysPage() {
                         </div>
                       </div>
 
-                      <p className="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">
+                      <p className="text-gray-400 text-sm mb-4 flex-grow line-clamp-3">
                         {course.summary}
                       </p>
 
@@ -128,11 +128,11 @@ export default function PathwaysPage() {
 
         {/* Call to Action */}
         <div className="mt-20 text-center">
-          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="bg-gray-800 rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Start Your Journey?
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-400 mb-6">
               Choose a course that aligns with your goals and start building the skills that will advance your career in tech.
             </p>
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-200">
