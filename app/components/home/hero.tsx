@@ -49,10 +49,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               
-              <button className="btn-secondary inline-flex items-center justify-center">
-                <Play className="mr-2 w-5 h-5" />
-                Watch Demo
-              </button>
+              
             </div>
           </div>
 
