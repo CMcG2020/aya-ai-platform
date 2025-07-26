@@ -1,77 +1,61 @@
+'use client';
 
-'use client'
-
-import { useState, useEffect, useRef } from 'react'
-import Image from 'next/image'
-import { ExternalLink, Clock, TrendingUp, User, Calendar } from 'lucide-react'
-import { NewsArticle } from '@/lib/news-api'
+import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
+import { ExternalLink, Clock, TrendingUp, User, Calendar } from 'lucide-react';
+import { NewsArticle } from '@/lib/news-api';
 
 interface NewsCardProps {
-  article: NewsArticle
-  index: number
+  article: NewsArticle;
+  index: number;
 }
 
 const NewsCard = ({ article, index }: NewsCardProps) => {
-  const [isVisible, setIsVisible] = useState(false)
-  const cardRef = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsVisible(true)
+            setIsVisible(true);
           }
-        })
+        });
       },
       { threshold: 0.1 }
-    )
+    );
 
     if (cardRef.current) {
-      observer.observe(cardRef.current)
+      observer.observe(cardRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
-
-  const getCategoryColor = () => {
-    switch (article.category) {
-      case 'AI tools':
-        return 'bg-blue-100 text-blue-800'
-      case 'business':
-        return 'bg-green-100 text-green-800'
-      case 'research':
-        return 'bg-purple-100 text-purple-800'
-      case 'ethics':
-        return 'bg-orange-100 text-orange-800'
-      case 'industry':
-        return 'bg-pink-100 text-pink-800'
-      default:
-        return 'bg-gray-100 text-gray-800'
-    }
-  }
+    return () => observer.disconnect();
+  }, []);
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
-    const now = new Date()
-    const diffInHours = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60))
-    
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffInHours = Math.floor(
+      (now.getTime() - date.getTime()) / (1000 * 60 * 60)
+    );
+
     if (diffInHours < 24) {
-      if (diffInHours < 1) return 'Just now'
-      return `${diffInHours}h ago`
+      if (diffInHours < 1) return 'Just now';
+      return `${diffInHours}h ago`;
     } else {
-      const diffInDays = Math.floor(diffInHours / 24)
-      if (diffInDays < 7) return `${diffInDays}d ago`
-      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+      const diffInDays = Math.floor(diffInHours / 24);
+      if (diffInDays < 7) return `${diffInDays}d ago`;
+      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
     }
-  }
+  };
 
   const getReadingTime = (content: string) => {
-    const wordsPerMinute = 200
-    const words = content.split(' ').length
-    const minutes = Math.ceil(words / wordsPerMinute)
-    return `${minutes} min read`
-  }
+    const wordsPerMinute = 200;
+    const words = content.split(' ').length;
+    const minutes = Math.ceil(words / wordsPerMinute);
+    return `${minutes} min read`;
+  };
 
   return (
     <div
@@ -84,18 +68,14 @@ const NewsCard = ({ article, index }: NewsCardProps) => {
       {/* Image */}
       <div className="relative aspect-video">
         <Image
-          src={article.image || "https://www.cxoinsightme.com/wp-content/uploads/2020/07/AI_shutterstock_1722492775-scaled.jpg"}
+          src={
+            article.image ||
+            'https://www.cxoinsightme.com/wp-content/uploads/2020/07/AI_shutterstock_1722492775-scaled.jpg'
+          }
           alt={article.title}
           fill
           className="object-cover"
         />
-        
-        {/* Category Badge */}
-        {article.category && (
-          <div className={`absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor()}`}>
-            {article.category}
-          </div>
-        )}
 
         {/* Trending Badge */}
         {article.trending && (
@@ -133,7 +113,11 @@ const NewsCard = ({ article, index }: NewsCardProps) => {
 
         {/* Description/Summary */}
         <p className="text-gray-600 mb-4 line-clamp-3">
-          {article.summary || article.description || 'Stay informed about the latest developments in artificial intelligence and how they impact our daily lives.'}
+          {
+            article.summary ||
+            article.description ||
+            'Stay informed about the latest developments in artificial intelligence and how they impact our daily lives.'
+          }
         </p>
 
         {/* Source and Author */}
@@ -141,7 +125,9 @@ const NewsCard = ({ article, index }: NewsCardProps) => {
           {article.source && (
             <div className="flex items-center space-x-2">
               <User className="w-4 h-4 text-gray-400" />
-              <span className="text-sm text-gray-600 font-medium">{article.source}</span>
+              <span className="text-sm text-gray-600 font-medium">
+                {article.source}
+              </span>
             </div>
           )}
           {article.author && article.author !== article.source && (
@@ -155,7 +141,10 @@ const NewsCard = ({ article, index }: NewsCardProps) => {
             <h4 className="font-semibold text-gray-900 mb-2">Key Points:</h4>
             <ul className="space-y-1">
               {article.keyPoints.slice(0, 3).map((point, pointIndex) => (
-                <li key={pointIndex} className="text-sm text-gray-600 flex items-start space-x-2">
+                <li
+                  key={pointIndex}
+                  className="text-sm text-gray-600 flex items-start space-x-2"
+                >
                   <div className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
                   <span>{point}</span>
                 </li>
@@ -176,7 +165,7 @@ const NewsCard = ({ article, index }: NewsCardProps) => {
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NewsCard
+export default NewsCard;
