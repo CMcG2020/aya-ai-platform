@@ -13,7 +13,7 @@ export interface ToolkitItem {
   bestFor: string[];
 }
 
-export const toolkitData: ToolkitItem[] = [
+export const tools = [
   {
     id: "chatgpt",
     name: "ChatGPT",
