@@ -40,8 +40,8 @@ const WelcomeGuide = () => {
     },
     {
       icon: Users,
-      title: 'Our Community',
-      description: 'Join a supportive network of women learning and growing with AI. Share experiences, ask questions, and collaborate on projects in a safe and encouraging environment.',
+      title: 'Aya concept',
+      description: 'Aya is born from the idea of simplifying this fast-changing forever evoling intelligence. It’s the friendly, knowledgeable companion who can find exactly what you need online and show you how to use it, without the jargon and intimidation. Aya has many meanings in different languages including beauty, mother, endurance, miracle. ',
       animation: 'slide-in-right'
     },
     {
@@ -62,7 +62,7 @@ const WelcomeGuide = () => {
               <span className="gradient-text"> Understanding AI</span>
             </h2>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Aya is dedicated to making Artificial Intelligence accessible and empowering for all women.
+              Aya is dedicated to making Artificial Intelligence accessible and simaple for all women.
               Start your journey here with foundational knowledge.
             </p>
           </div>
