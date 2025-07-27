@@ -7,7 +7,7 @@ import { ExternalLink, Star, DollarSign, Users, Zap, CheckCircle } from 'lucide-
 
 interface ToolCardProps {
   tool: {
-    id: number
+    id: string
     name: string
     description: string
     category: string
