@@ -29,7 +29,7 @@ export const questions = [
   },
   {
     id: 1,
-    text: "What's your primary goal with AI?",
+    text: "What's your primary goal with leanring about AI?",
     description: "Understanding your main objective helps us prioritize the most relevant tools and learning paths.",
     options: [
       {
