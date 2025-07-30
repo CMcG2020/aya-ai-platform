@@ -1,4 +1,4 @@
-toolkit_data_content = '''// app/lib/toolkit-data.ts
+// app/lib/toolkit-data.ts
 export interface ToolkitItem {
   id: string;
   name: string;
@@ -1182,9 +1182,4 @@ export const pricingOptions = [
   "Free",
   "Freemium", 
   "Paid"
-];'''
-
-with open('toolkit-data.ts', 'w') as f:
-    f.write(toolkit_data_content)
-
-print("Created updated toolkit-data.ts with 60+ AI tools organized by categories")
+];
