@@ -121,6 +121,11 @@ export default function MoreThanChatGPT() {
       {/* Embedded Videos Section */}
       <section className="py-20 bg-gray-50">
         <div className="section-container">
+          <h2 className="text-4xl font-bold text-center mb-4">
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              Visual Explanations
+            </span>
+          </h2>
           <h2 className="text-4xl font-bold text-center mb-12">Watch and Learn</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="aspect-w-16 aspect-h-9">
