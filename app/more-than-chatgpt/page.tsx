@@ -117,6 +117,35 @@ export default function MoreThanChatGPT() {
           </div>
         </div>
       </section>
+
+      {/* Embedded Videos Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="section-container">
+          <h2 className="text-4xl font-bold text-center mb-12">Watch and Learn</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="aspect-w-16 aspect-h-9">
+              <iframe 
+                src="https://www.youtube.com/embed/zjkBMFhNj_g" 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+                className="w-full h-full rounded-lg shadow-lg"
+              ></iframe>
+            </div>
+            <div className="aspect-w-16 aspect-h-9">
+              <iframe 
+                src="https://www.youtube.com/embed/uMzUB89uSxU" 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+                className="w-full h-full rounded-lg shadow-lg"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
