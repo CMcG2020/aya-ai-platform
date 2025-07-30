@@ -18,7 +18,6 @@ const Navigation = () => {
   }, [])
 
   const navItems = [
-    { name: 'Quiz', href: '/quiz' },
     { name: 'More Than ChatGPT', href: '/more-than-chatgpt' },
     { name: 'Discovery', href: '/discovery' },
     { name: 'Sandbox', href: '/sandbox' },
