@@ -3,15 +3,26 @@
 
 import { useState, useEffect } from 'react'
 import { Search, Filter, Grid, List } from 'lucide-react'
-import ToolCard from './tool-card'
-import { tools } from '@/lib/toolkit-data'
+import dynamic from 'next/dynamic'
+import { ToolkitItem } from '@/lib/toolkit-data'
+
+// Dynamically import ToolCard to reduce initial bundle size
+const ToolCard = dynamic(() => import('./tool-card'), { ssr: true })
+
+// Load tools data client-side to reduce initial JS bundle
+const loadToolsData = async () => {
+  const { tools } = await import('@/lib/toolkit-data')
+  return tools
+}
 
 const ToolkitContainer = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedPricing, setSelectedPricing] = useState('all')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
-  const [filteredTools, setFilteredTools] = useState(tools)
+  const [filteredTools, setFilteredTools] = useState<ToolkitItem[]>([])
+  const [allTools, setAllTools] = useState<ToolkitItem[]>([])
+  const [loading, setLoading] = useState(true)
 
   const categories = [
     'all', 'writing', 'design', 'productivity', 'marketing', 'analysis', 'automation', 'communication'
@@ -21,8 +32,25 @@ const ToolkitContainer = () => {
     'all', 'free', 'freemium', 'paid'
   ]
 
+  // Load tools data on component mount
   useEffect(() => {
-    let filtered = tools
+    const loadTools = async () => {
+      try {
+        const toolsData = await loadToolsData()
+        setAllTools(toolsData)
+        setFilteredTools(toolsData)
+      } catch (error) {
+        console.error('Failed to load tools data:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadTools()
+  }, [])
+
+  useEffect(() => {
+    let filtered = allTools
 
     // Filter by search term
     if (searchTerm) {
@@ -45,7 +73,7 @@ const ToolkitContainer = () => {
     }
 
     setFilteredTools(filtered)
-  }, [searchTerm, selectedCategory, selectedPricing])
+  }, [searchTerm, selectedCategory, selectedPricing, allTools])
 
   return (
     <div className="section-container">
@@ -143,22 +171,28 @@ const ToolkitContainer = () => {
       </div>
 
       {/* Tools Grid/List */}
-      <div className={viewMode === 'grid' 
-        ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-        : 'space-y-6'
-      }>
-        {filteredTools.map((tool, index) => (
-          <ToolCard 
-            key={tool.id} 
-            tool={tool} 
-            index={index}
-            viewMode={viewMode}
-          />
-        ))}
-      </div>
+      {loading ? (
+        <div className="flex justify-center items-center h-64">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500"></div>
+        </div>
+      ) : (
+        <div className={viewMode === 'grid' 
+          ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+          : 'space-y-6'
+        }>
+          {filteredTools.map((tool, index) => (
+            <ToolCard 
+              key={tool.id} 
+              tool={tool} 
+              index={index}
+              viewMode={viewMode}
+            />
+          ))}
+        </div>
+      )}
 
       {/* Empty State */}
-      {filteredTools.length === 0 && (
+      {!loading && filteredTools.length === 0 && (
         <div className="text-center py-12">
           <Filter className="w-16 h-16 text-gray-300 mx-auto mb-4" />
           <h3 className="text-xl font-semibold text-gray-600 mb-2">No tools found</h3>
@@ -177,7 +211,7 @@ const ToolkitContainer = () => {
       )}
 
       {/* Load More */}
-      {filteredTools.length > 0 && filteredTools.length >= 12 && (
+      {!loading && filteredTools.length > 0 && filteredTools.length >= 12 && (
         <div className="text-center mt-12">
           <button className="btn-secondary">
             Load More Tools

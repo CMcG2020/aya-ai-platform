@@ -1,3 +1,7 @@
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
 /** @app/lib/types.ts {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
@@ -8,4 +12,4 @@ const nextConfig = {
   }
 }
 
-module.exports = nextConfig
+module.exports = withBundleAnalyzer(nextConfig)
