@@ -1,248 +1,175 @@
-
 # Aya - AI Empowerment Platform for Women
 
-Aya is a comprehensive platform designed to empower women to use AI confidently in their everyday lives. From discovery to mastery, Aya provides tools, resources, and guidance tailored specifically for women entering the AI space.
+Live site: https://cmcg2020.github.io/aya-ai-platform/
 
-## 🌟 Features
+Aya is a platform designed to empower women to use AI confidently in everyday life. From discovery to mastery, Aya provides approachable tools, resources, and guidance.
 
-### 🧭 The Spark Quiz
-Interactive onboarding quiz that personalizes your AI journey based on your goals, interests, and experience level.
+## Features
 
-### 🔍 Discovery Hub
-Pinterest-style dashboard with curated "Idea Cards" featuring quick wins, tool spotlights, and inspiring success stories.
+- Spark Quiz: Interactive onboarding that personalizes your AI journey by goals and experience.
+- Discovery Hub: Card-based “quick wins,” tool spotlights, and inspiring success stories.
+- Sandbox: Guided “recipes” for common AI tasks with practical, repeatable templates.
+- Pathways: Structured learning roadmaps for bigger goals (career growth, side hustles, etc.).
+- AI Toolkit: Filterable directory of vetted AI tools with plain English descriptions and pricing.
+- Latest Developments: Curated AI news and updates, explained simply.
 
-### 🛠️ The Sandbox
-Practice space with guided "Recipes" - step-by-step templates for common AI tasks, organized by categories.
+## Tech Stack
 
-### 🗺️ Pathways
-Structured learning roadmaps for larger projects like launching a side hustle or advancing your career.
+- Framework: Next.js 14 (App Router), static export for GitHub Pages
+- Styling: Tailwind CSS
+- UI: Radix UI + custom components
+- Animations: Framer Motion
+- Icons: Lucide
+- Testing: Jest + Testing Library
+- Linting/Formatting: ESLint + Prettier
+- DB Client (future): Prisma (retained for planned non-static migration)
 
-### 🧰 AI Toolkit
-Filterable directory of vetted AI tools with plain English descriptions, pricing info, and real use cases.
+## Repository Structure
 
-### 📰 Latest Developments
-Real-time AI news and developments, curated and explained in easy-to-understand language.
+```
+.
+├── app/                     # Next.js App Router pages & global app setup
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── quiz/
+│   ├── discovery/
+│   ├── sandbox/
+│   ├── pathways/
+│   ├── toolkit/
+│   └── news/
+├── public/                  # Static assets
+├── prisma/                  # Prisma schema & client (kept for future non-static architecture)
+├── scripts/                 # Project scripts (build, maintenance, etc.)
+├── __tests__/               # Jest tests (e.g., components/toolkit)
+├── .github/workflows/       # CI/CD (GitHub Pages, optional checks)
+├── components.json          # shadcn/ui scaffolding metadata (if used)
+├── jest.config.js
+├── jest.setup.ts
+├── lighthouse-config.json
+├── next.config.js
+├── tailwind.config.ts
+├── tsconfig.json
+├── tsconfig.jest.json
+├── package.json
+├── package-lock.json
+├── LICENSE                  # Apache-2.0
+└── README.md
+```
 
-## 🚀 Quick Start
+## Quick Start
 
-### Prerequisites
-- Node.js 18+ 
-- Yarn package manager
+Prerequisites: Node.js 18+
 
-### Local Development
+You can use npm (default) or Yarn. The repo currently includes `package-lock.json`; if you prefer Yarn, remove `package-lock.json` and commit `yarn.lock`.
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/aya-platform.git
-   cd aya-platform
-   ```
-
-2. **Install dependencies**
-   ```bash
-   cd app
-   yarn install
-   ```
-
-3. **Start development server**
-   ```bash
-   yarn dev
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:3000`
-
-### Building for Production
+### Using npm
 
 ```bash
-cd app
+npm install
+npm run dev
+npm run build           # static export
+npx serve ./out         # preview static export
+```
+
+### Using Yarn
+
+```bash
+yarn
+yarn dev
 yarn build
 ```
 
-The static files will be generated in the `out` directory, ready for deployment to GitHub Pages.
+Then open http://localhost:3000
 
-## 🏗️ Architecture
+## Deployment (GitHub Pages)
 
-### Tech Stack
-- **Framework**: Next.js 14 with App Router
-- **Styling**: Tailwind CSS
-- **UI Components**: Radix UI + Custom Components
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Deployment**: GitHub Pages (Static Export)
+The site is built as a static export and deployed via GitHub Actions to GitHub Pages.
 
-### Project Structure
-```
-app/
-├── app/                    # Next.js App Router pages
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx          # Homepage
-│   ├── quiz/             # Quiz section
-│   ├── discovery/        # Discovery Hub
-│   ├── sandbox/          # Practice recipes
-│   ├── pathways/         # Learning paths
-│   ├── toolkit/          # AI tools directory
-│   └── news/             # Latest developments
-├── components/           # Reusable components
-├── lib/                 # Utilities and data
-└── public/              # Static assets
-```
+- Push to `main` to trigger the Pages workflow.
+- Ensure Pages is enabled in Settings → Pages and set to GitHub Actions.
+- Static files are generated under `out/`.
 
-## 🎨 Design System
-
-### Color Palette
-- **Primary**: Purple to Pink gradient (#9333ea to #ec4899)
-- **Secondary**: Blue shades for tools and resources
-- **Success**: Green for achievements and positive actions
-- **Warning**: Yellow/Orange for important notices
-
-### Typography
-- **Headings**: Playfair Display (serif)
-- **Body**: Inter (sans-serif)
-
-### Component Patterns
-- Cards with hover animations and subtle shadows
-- Gradient buttons and text highlights
-- Responsive grid layouts
-- Progressive disclosure for complex information
-
-## 📱 Responsive Design
-
-The platform is built mobile-first with breakpoints:
-- **Mobile**: 320px - 767px
-- **Tablet**: 768px - 1023px  
-- **Desktop**: 1024px+
-
-## 🚢 Deployment
-
-### GitHub Pages Deployment
-
-The site automatically deploys to GitHub Pages when you push to the main branch.
-
-1. **Enable GitHub Pages**
-   - Go to repository Settings
-   - Navigate to Pages section
-   - Set source to "GitHub Actions"
-
-2. **Push to main branch**
-   ```bash
-   git add .
-   git commit -m "Deploy to GitHub Pages"
-   git push origin main
-   ```
-
-3. **Access your site**
-   Your site will be available at: `https://your-username.github.io/aya-platform`
-
-### Manual Deployment
-
-For other static hosting services:
+### Manual deployment to other static hosts
 
 ```bash
-cd app
-yarn build
-# Upload the 'out' directory to your hosting service
+npm run build   # or: yarn build
+# Upload the 'out/' directory to your host
 ```
 
-## 🔧 Configuration
+## Configuration
 
-### Environment Variables
-Create a `.env.local` file in the `app` directory:
+### Environment variables (optional)
 
-```env
-# Optional: Add any API keys for real news integration
-NEXT_PUBLIC_NEWS_API_KEY=your_api_key_here
-```
+Create `app/.env.local` if you integrate a news API or other public-only keys:
 
-### Next.js Configuration
-The `next.config.js` is pre-configured for GitHub Pages deployment:
-- Static export enabled
-- Image optimization disabled (for static hosting)
-- Trailing slashes enabled
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our contributing guidelines:
-
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. **Commit your changes**
-   ```bash
-   git commit -m "Add amazing feature"
-   ```
-4. **Push to the branch**
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-5. **Open a Pull Request**
-
-### Content Updates
-
-To add new content:
-
-- **Quiz Questions**: Edit `lib/quiz-data.ts`
-- **Discovery Ideas**: Edit `lib/discovery-data.ts`
-- **Sandbox Recipes**: Edit `lib/sandbox-data.ts`
-- **Learning Pathways**: Edit `lib/pathways-data.ts`
-- **AI Tools**: Edit `lib/toolkit-data.ts`
-
-## 📊 Analytics & Performance
-
-### Core Web Vitals
-The platform is optimized for:
-- **LCP**: < 2.5s (Largest Contentful Paint)
-- **FID**: < 100ms (First Input Delay)
-- **CLS**: < 0.1 (Cumulative Layout Shift)
-
-### SEO Optimization
-- Semantic HTML structure
-- Meta tags and Open Graph
-- Structured data markup
-- Accessible design (WCAG 2.1 AA)
-
-## 🆘 Troubleshooting
-
-### Common Issues
-
-**Build fails with TypeScript errors**
 ```bash
-cd app
-yarn type-check
+NEXT_PUBLIC_NEWS_API_KEY=your_api_key
 ```
 
-**Images not loading on GitHub Pages**
-- Ensure images use the IMAGE_PLACEHOLDER format
-- Check that next.config.js has `images.unoptimized: true`
+### Next.js configuration (pre-set for static export)
 
-**Styles not applying correctly**
-```bash
-cd app
-yarn build
-# Check the generated CSS in out/_next/static/css/
-```
+- `images.unoptimized: true`
+- `trailingSlash: true`
+- `output: 'export'` (via `next export`)
 
-### Getting Help
+## Testing
 
-- 📧 Email: support@ayaplatform.com
-- 💬 Discussions: Use GitHub Discussions tab
-- 🐛 Issues: Use GitHub Issues for bugs
+- Run tests: `npm test` or `yarn test`
+- Coverage (optional): `npx jest --coverage`
 
-## 📄 License
+Tip: Enable a test job in `.github/workflows` if you want tests to run on PRs.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Design System
 
-## 🌟 Acknowledgments
+- Palette: Purple → Pink gradient (primary), Blues (secondary), Greens (success), Yellow/Orange (warning)
+- Typography: Playfair Display (headings), Inter (body)
+- Patterns: Animated cards, gradient buttons, responsive grids, progressive disclosure
 
-- Design inspiration from [Mattie James](https://mattiejames.com)
-- UI components built with [Radix UI](https://www.radix-ui.com/)
-- Icons provided by [Lucide](https://lucide.dev/)
-- Animations powered by [Framer Motion](https://www.framer.com/motion/)
+## Performance & SEO
 
----
+- Optimized Core Web Vitals for static hosting
+- Semantic HTML, proper meta/Open Graph tags
+- Accessible components (WCAG 2.1 AA in mind)
 
-**Built with ❤️ for women in AI**
+## Architecture Notes
 
-*Empowering women to use AI confidently in work, home, learning, and play.*
+This repo is currently deployed as a static export. The `prisma` directory and Prisma dependency are intentionally retained because Aya will migrate to a non-static architecture in the future. For now, Prisma is not required for the static build and is not used at runtime.
+
+If you want to keep the dependency lightweight during static-only phases, you can mark Prisma as a devDependency and document that it’s for the planned server-backed version.
+
+## Contributing
+
+- Fork the repo
+- Create a feature branch: `git checkout -b feature/amazing-feature`
+- Commit: `git commit -m "Add amazing feature"`
+- Push: `git push origin feature/amazing-feature`
+- Open a Pull Request
+
+Content lives either under `lib/` or in route-specific folders within `app/`:
+
+- Quiz: `app/quiz/`
+- Discovery: `app/discovery/`
+- Sandbox: `app/sandbox/`
+- Pathways: `app/pathways/`
+- Toolkit: `app/toolkit/`
+- News: `app/news/`
+
+## Troubleshooting
+
+- TypeScript issues: `npm run type-check` or `yarn type-check` (if configured)
+- Styles not applying: rebuild and inspect `out/_next/static/css`
+- Images on Pages: ensure `images.unoptimized: true` and paths are correct for static hosting
+
+## License
+
+Apache-2.0. See `LICENSE`.
+
+## Acknowledgments
+
+- Design inspiration from Mattie James
+- UI components: Radix UI
+- Icons: Lucide
+- Animations: Framer Motion
+
+Built with ❤️ to help women use AI confidently in work, home, learning, and play.
