@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Coding Black Females is the largest community of Black women in tech in the UK. Growing, educating and inspiring the community of Black women in tech."
+    />
+    <meta name="author" content="Coding Black Females" />
+
+    <title>Coding Black Females</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom fonts for this template -->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.css" rel="stylesheet" />
+    <link href="css/cbf-carousel.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/favicon.png" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/googletagmanager.js"></script>
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <!-- inserted by navigation.js -->
+
+    <!-- Header / Jumbotron -->
+    <header class="masthead">
+      <div class="container homepage-banner">
+        <div class="intro-text">
+          <!-- <img src="img/cbf_logo_white.svg" /> -->
+          <p class="banner-text">
+            Building, Supporting and Educating the community of Coding Black
+            Females
+          </p>
+          <!-- Call to action buttons -->
+          <div class="cta-buttons">
+            <a
+              class="btn btn-primary btn-l text-uppercase js-scroll-trigger"
+              href="join-us.html"
+              >Join Us</a
+            >
+            <a
+              class="btn btn-primary btn-l text-uppercase js-scroll-trigger"
+              href="supportus.html"
+              >Support Us</a
+            >
+            <a
+              class="btn btn-primary btn-l text-uppercase js-scroll-trigger"
+              href="memberzone.html"
+              >Opportunities</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Services -->
+    <section id="home">
+      <div class="container">
+        <div class="row text-center custom-row">
+          <div class="col-md-4">
+            <a href="join-us.html">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-users fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <h4 class="service-heading">Join Us</h4>
+            <p class="text-muted">
+              Are you a Coding Black Female? Join us, come along to our meetups.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <a href="events.html">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-calendar fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <h4 class="service-heading">Events</h4>
+            <p class="text-muted">
+              Join us at our events, find out more about the great events we
+              have coming up at Coding Black Females.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <a href="contact.html">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <h4 class="service-heading">Get In Touch</h4>
+            <p class="text-muted">
+              Get in touch if you want to find out more or help to inspire black
+              women in tech.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <a href="academy/awsrestart">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-cloud fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <h4 class="service-heading">AWS re/Start Bootcamp</h4>
+            <p class="text-muted">
+              Apply for the AWS re/Start Bootcamp to train to become a Cloud
+              Engineer
+            </p>
+          </div>
+          <div class="col-md-4">
+            <a href="academy/advanced-full-stack-development">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-graduation-cap fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <h4 class="service-heading">
+              Advanced Full Stack Development Bootcamp
+            </h4>
+            <p class="text-muted">
+              Apply for the Advanced Full Stack Development Bootcamp to train to
+              become a Senior Software Engineer and you've had a career break or
+              are an experienced professional
+            </p>
+          </div>
+          <div class="col-md-4">
+            <a href="academy/entrytotech">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <h4 class="service-heading">Entry To Tech Bootcamp</h4>
+            <p class="text-muted">
+              Apply for the Entry To Tech Bootcamp to train to become a Software
+              Engineer
+            </p>
+          </div>
+          <div class="col-md-4">
+            <a href="visibleintech.html">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-hashtag fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <h4 class="service-heading">#VisibleInTech</h4>
+            <p class="text-muted">Check out our Visible In Tech Campaign</p>
+          </div>
+          <div class="col-md-4">
+            <a href="supportus.html">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-hands-helping fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <h4 class="service-heading">Support Us</h4>
+            <p class="text-muted">Find out how you can support what we do</p>
+          </div>
+          <div class="col-md-4">
+            <a href="blog.html">
+              <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                <i class="fas fa-blog fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <h4 class="service-heading">Blog</h4>
+            <p class="text-muted">
+              Read our blog, find out more about what we're doing and the
+              members of our community.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        id="signup"
+        class="text-center"
+        style="
+          background-color: #2d2d2d;
+          color: whitesmoke;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        "
+      >
+        <h4><strong>Join Coding Black Females</strong></h4>
+        <p style="margin: 20px">
+          To receive regular updates about Coding Black Females, please sign up
+          to our mailing list
+          <br />
+          <a
+            href="join-us.html"
+            class="btn btn-primary"
+            style="margin-top: 20px"
+            >Join Mailing List</a
+          >
+        </p>
+      </div>
+
+      <div
+        id="sponsors"
+        class="text-center"
+        style="padding-top: 30px; padding-bottom: 30px"
+      >
+        <h3>Our Partners and Sponsors</h3>
+        <p>A glance at the companies we're working with</p>
+      </div>
+
+      <div class="container">
+        <div
+          id="seenin"
+          class="text-center"
+          style="padding-top: 30px; padding-bottom: 30px"
+        >
+          <h3>As seen in</h3>
+          <p>
+            Check out our articles on our <a href="press.html">Press Page</a>
+          </p>
+          <div class="row" style="filter: grayscale(50%)">
+            <div class="col-lg-3">
+              <img
+                style="height: 35px; width: auto; filter: grayscale(1)"
+                src="img/press/bbc.png"
+              />
+            </div>
+            <div class="col-lg-3">
+              <img
+                style="height: 35px; width: auto; filter: grayscale(1)"
+                src="img/press/computer-weekly.png"
+              />
+            </div>
+            <div class="col-lg-3">
+              <img
+                style="height: 35px; width: auto; filter: grayscale(1)"
+                src="img/press/metro.jpg"
+              />
+            </div>
+            <div class="col-lg-3">
+              <img
+                style="height: 35px; width: auto; filter: grayscale(1)"
+                src="img/press/the-voice.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Inserted by navigation.js -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+    <script src="js/navigation.js"></script>
+    <script type="module" src="js/sponsors.js"></script>
+    <!--    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>-->
+    <!--    <script type="text/javascript">-->
+    <!--        window.dojoRequire(["mojo/signup-forms/Loader"], function(L) {-->
+    <!--            L.start({-->
+    <!--                "baseUrl": "mc.us20.list-manage.com",-->
+    <!--                "uuid": "49e1b75131fe9c09ff623d872",-->
+    <!--                "lid": "636e67ea58",-->
+    <!--                "uniqueMethods": true-->
+    <!--            })-->
+    <!--        })-->
+    <!--    </script>-->
+
+    <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "a93e849e-eec8-40e0-bee5-2ca0225f6d83";
+      (function () {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
+    <!-- Hotjar Tracking Code for https://codingblackfemales.com -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3253938, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+    <script src="js/drip.js"></script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"eedd99c90989497bab40fd9d9081af49","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

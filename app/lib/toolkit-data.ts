@@ -27,7 +27,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.7,
     userCount: "100M+",
     website: "https://chat.openai.com/",
-    logo: "/logos/chatgpt.png",
+    logo: "/aya-ai-platform/logos/chatgpt.png",
     description: "The most versatile AI assistant for writing, analysis, and problem-solving. Chat naturally to get help with any task from emails to creative projects.",
     features: ["Natural conversation", "File analysis", "Creative writing", "Code generation"],
     useCases: [
@@ -48,7 +48,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.6,
     userCount: "10M+",
     website: "https://claude.ai/",
-    logo: "/logos/claude.png",
+    logo: "/aya-ai-platform/logos/claude.png",
     description: "Best AI assistant for coding and collaborative problem-solving. Creates interactive artifacts and provides clean, reliable outputs with detailed explanations.",
     features: ["Artifacts creation", "Code generation", "Large context window", "Safe responses"],
     useCases: [
@@ -69,7 +69,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.5,
     userCount: "50M+",
     website: "https://gemini.google.com/",
-    logo: "/logos/gemini.png",
+    logo: "/aya-ai-platform/logos/gemini.png",
     description: "Google's AI with massive context window, perfect for analyzing long documents. Features audio overviews and deep integration with Google services.",
     features: ["1M+ token context", "Audio overviews", "Google integration", "Multimodal capabilities"],
     useCases: [
@@ -90,7 +90,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.4,
     userCount: "15M+",
     website: "https://www.perplexity.ai/",
-    logo: "/logos/perplexity.png",
+    logo: "/aya-ai-platform/logos/perplexity.png",
     description: "AI-powered search engine that provides sourced, up-to-date answers. Perfect for research with real-time information and proper citations.",
     features: ["Real-time search", "Source citations", "Follow-up questions", "Academic mode"],
     useCases: [
@@ -113,7 +113,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.8,
     userCount: "20M+",
     website: "https://www.midjourney.com/",
-    logo: "/logos/midjourney.png",
+    logo: "/aya-ai-platform/logos/midjourney.png",
     description: "Industry-leading artistic quality for concept art and creative visuals. Creates stunning, cinematic images that look like professional artwork.",
     features: ["Artistic excellence", "Style variety", "Web interface", "Community gallery"],
     useCases: [
@@ -134,7 +134,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.6,
     userCount: "100M+",
     website: "https://chat.openai.com/",
-    logo: "/logos/dalle.png",
+    logo: "/aya-ai-platform/logos/dalle.png",
     description: "Integrated with ChatGPT, excellent prompt understanding and iteration. Create and edit images through natural conversation.",
     features: ["Conversational editing", "Text in images", "Style variety", "ChatGPT integration"],
     useCases: [
@@ -155,7 +155,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.8,
     userCount: "135M+",
     website: "https://www.canva.com/",
-    logo: "/logos/canva.png",
+    logo: "/aya-ai-platform/logos/canva.png",
     description: "Quick design creation with AI image generation built-in. Create complete designs with templates, AI images, and drag-and-drop editing.",
     features: ["Magic Design", "Background remover", "Brand kit", "Template library"],
     useCases: [
@@ -176,7 +176,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.5,
     userCount: "25M+",
     website: "https://firefly.adobe.com/",
-    logo: "/logos/adobe-firefly.png",
+    logo: "/aya-ai-platform/logos/adobe-firefly.png",
     description: "Commercially-safe AI images integrated with Creative Cloud. Perfect for businesses needing copyright-safe visuals with professional quality.",
     features: ["Commercial safety", "Photoshop integration", "Style presets", "Vector generation"],
     useCases: [
@@ -197,7 +197,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.4,
     userCount: "5M+",
     website: "https://ideogram.ai/",
-    logo: "/logos/ideogram.png",
+    logo: "/aya-ai-platform/logos/ideogram.png",
     description: "Best for generating images with accurate text and typography. Perfect for creating memes, posters, and graphics with readable text.",
     features: ["Text accuracy", "Typography control", "Batch generation", "Style options"],
     useCases: [
@@ -220,7 +220,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.7,
     userCount: "1M+",
     website: "https://www.synthesia.io/",
-    logo: "/logos/synthesia.png",
+    logo: "/aya-ai-platform/logos/synthesia.png",
     description: "Create professional AI avatar videos from text. Perfect for training videos, presentations, and marketing content without cameras or studios.",
     features: ["230+ AI avatars", "140+ languages", "Custom avatars", "Brand templates"],
     useCases: [
@@ -241,7 +241,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.5,
     userCount: "8M+",
     website: "https://runwayml.com/",
-    logo: "/logos/runway.png",
+    logo: "/aya-ai-platform/logos/runway.png",
     description: "Advanced AI video generation and editing tools. Create cinematic videos, remove backgrounds, and apply AI effects to existing footage.",
     features: ["Text-to-video", "Video editing", "Background removal", "AI effects"],
     useCases: [
@@ -262,7 +262,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.6,
     userCount: "2M+",
     website: "https://www.opus.pro/",
-    logo: "/logos/opus-clip.png",
+    logo: "/aya-ai-platform/logos/opus-clip.png",
     description: "Transform long videos into viral short clips automatically. AI finds the best moments and creates engaging social media content.",
     features: ["Auto clip creation", "Viral score", "Captions", "Multi-platform sizing"],
     useCases: [
@@ -283,7 +283,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.4,
     userCount: "1M+",
     website: "https://www.descript.com/",
-    logo: "/logos/descript.png",
+    logo: "/aya-ai-platform/logos/descript.png",
     description: "Edit videos by editing text transcripts. Revolutionary approach to video editing with AI-powered features like voice cloning.",
     features: ["Text-based editing", "Voice cloning", "Screen recording", "Collaboration"],
     useCases: [
@@ -306,7 +306,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.5,
     userCount: "100K+",
     website: "https://www.jasper.ai/",
-    logo: "/logos/jasper.png",
+    logo: "/aya-ai-platform/logos/jasper.png",
     description: "AI copywriting platform for marketing and business content. Create blog posts, ads, emails, and social media content at scale.",
     features: ["Brand voice", "Templates", "SEO optimization", "Team collaboration"],
     useCases: [
@@ -327,7 +327,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.6,
     userCount: "30M+",
     website: "https://www.grammarly.com/",
-    logo: "/logos/grammarly.png",
+    logo: "/aya-ai-platform/logos/grammarly.png",
     description: "AI-powered writing assistant and grammar checker. Improves clarity, tone, and correctness across all your writing.",
     features: ["Grammar checking", "Tone detection", "Plagiarism detection", "Writing suggestions"],
     useCases: [
@@ -348,7 +348,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.3,
     userCount: "30M+",
     website: "https://www.notion.so/product/ai",
-    logo: "/logos/notion.png",
+    logo: "/aya-ai-platform/logos/notion.png",
     description: "AI writing and brainstorming within your workspace. Seamlessly integrated with your notes, docs, and databases.",
     features: ["Workspace integration", "Content generation", "Summarization", "Translation"],
     useCases: [
@@ -369,7 +369,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.4,
     userCount: "10M+",
     website: "https://www.copy.ai/",
-    logo: "/logos/copy-ai.png",
+    logo: "/aya-ai-platform/logos/copy-ai.png",
     description: "Marketing copy and content generation made simple. Create ads, emails, blog posts, and social media content with AI assistance.",
     features: ["Marketing templates", "Brand voice", "Workflow automation", "Team collaboration"],
     useCases: [
@@ -392,7 +392,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.5,
     userCount: "5M+",
     website: "https://notebooklm.google.com/",
-    logo: "/logos/notebooklm.png",
+    logo: "/aya-ai-platform/logos/notebooklm.png",
     description: "Google's AI research assistant that analyzes your documents. Upload sources and get AI-powered insights, summaries, and answers.",
     features: ["Document analysis", "Source grounding", "Audio overviews", "Citation tracking"],
     useCases: [
@@ -413,7 +413,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.3,
     userCount: "1M+",
     website: "https://consensus.app/",
-    logo: "/logos/consensus.png",
+    logo: "/aya-ai-platform/logos/consensus.png",
     description: "AI-powered academic research and paper analysis. Search through millions of research papers and get evidence-based answers.",
     features: ["Academic search", "Evidence synthesis", "Citation tracking", "Research summaries"],
     useCases: [
@@ -434,7 +434,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.4,
     userCount: "500K+",
     website: "https://elicit.org/",
-    logo: "/logos/elicit.png",
+    logo: "/aya-ai-platform/logos/elicit.png",
     description: "Research assistant for finding and summarizing scientific papers. Automate literature reviews and extract key insights.",
     features: ["Paper discovery", "Data extraction", "Literature reviews", "Research workflows"],
     useCases: [
@@ -455,7 +455,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.2,
     userCount: "100K+",
     website: "https://mem.ai/",
-    logo: "/logos/mem.png",
+    logo: "/aya-ai-platform/logos/mem.png",
     description: "AI-powered knowledge management and note-taking. Automatically organize and connect your thoughts, notes, and research.",
     features: ["Smart organization", "Auto-tagging", "Knowledge graphs", "AI search"],
     useCases: [
@@ -478,7 +478,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.7,
     userCount: "5M+",
     website: "https://elevenlabs.io/",
-    logo: "/logos/elevenlabs.png",
+    logo: "/aya-ai-platform/logos/elevenlabs.png",
     description: "Realistic AI voice generation and cloning. Create natural-sounding voiceovers in multiple languages with emotion and intonation.",
     features: ["Voice cloning", "Multilingual", "Emotion control", "Real-time generation"],
     useCases: [
@@ -499,7 +499,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.4,
     userCount: "4M+",
     website: "https://murf.ai/",
-    logo: "/logos/murf.png",
+    logo: "/aya-ai-platform/logos/murf.png",
     description: "Professional AI voiceovers for videos and presentations. Choose from 120+ voices in 20+ languages with studio-quality output.",
     features: ["120+ voices", "Voice customization", "Script editor", "Commercial license"],
     useCases: [
@@ -520,7 +520,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.6,
     userCount: "10M+",
     website: "https://suno.ai/",
-    logo: "/logos/suno.png",
+    logo: "/aya-ai-platform/logos/suno.png",
     description: "AI music generation from text prompts. Create original songs, instrumentals, and jingles in any style or genre.",
     features: ["Text-to-music", "Multiple genres", "Lyrics generation", "Instrumental tracks"],
     useCases: [
@@ -541,7 +541,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.5,
     userCount: "2M+",
     website: "https://www.udio.com/",
-    logo: "/logos/udio.png",
+    logo: "/aya-ai-platform/logos/udio.png",
     description: "Create original songs and music with AI. Generate full tracks with vocals, instruments, and professional mixing.",
     features: ["Full song generation", "Vocal synthesis", "Genre variety", "Professional mixing"],
     useCases: [
@@ -564,7 +564,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.5,
     userCount: "5M+",
     website: "https://zapier.com/",
-    logo: "/logos/zapier.png",
+    logo: "/aya-ai-platform/logos/zapier.png",
     description: "Automate workflows between 7,000+ apps with AI. Connect your favorite tools and let AI handle repetitive tasks automatically.",
     features: ["7000+ app integrations", "AI automation", "Custom workflows", "Team collaboration"],
     useCases: [
@@ -585,7 +585,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.3,
     userCount: "100K+",
     website: "https://www.usemotion.com/",
-    logo: "/logos/motion.png",
+    logo: "/aya-ai-platform/logos/motion.png",
     description: "AI-powered calendar and task management. Automatically schedules your tasks and meetings for optimal productivity.",
     features: ["AI scheduling", "Task management", "Calendar optimization", "Team coordination"],
     useCases: [
@@ -606,7 +606,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.4,
     userCount: "500K+",
     website: "https://reclaim.ai/",
-    logo: "/logos/reclaim.png",
+    logo: "/aya-ai-platform/logos/reclaim.png",
     description: "Smart calendar scheduling with AI optimization. Automatically blocks time for important tasks and maintains work-life balance.",
     features: ["Smart scheduling", "Focus time", "Habit tracking", "Calendar sync"],
     useCases: [
@@ -627,7 +627,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.2,
     userCount: "300K+",
     website: "https://www.getclockwise.com/",
-    logo: "/logos/clockwise.png",
+    logo: "/aya-ai-platform/logos/clockwise.png",
     description: "AI focus time and meeting optimization. Automatically creates focus blocks and reduces meeting fragmentation.",
     features: ["Focus time", "Meeting optimization", "Team coordination", "Analytics"],
     useCases: [
@@ -650,7 +650,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.3,
     userCount: "100K+",
     website: "https://www.shortwave.com/",
-    logo: "/logos/shortwave.png",
+    logo: "/aya-ai-platform/logos/shortwave.png",
     description: "AI-powered email client with smart features. Automatically summarizes emails, suggests responses, and organizes your inbox.",
     features: ["AI summaries", "Smart replies", "Email scheduling", "Search enhancement"],
     useCases: [
@@ -671,7 +671,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.4,
     userCount: "500K+",
     website: "https://superhuman.com/",
-    logo: "/logos/superhuman.png",
+    logo: "/aya-ai-platform/logos/superhuman.png",
     description: "AI-enhanced email with advanced productivity features. Blazing fast email experience with AI-powered insights and automation.",
     features: ["Speed optimization", "AI insights", "Email tracking", "Advanced shortcuts"],
     useCases: [
@@ -692,7 +692,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.1,
     userCount: "5M+",
     website: "https://www.boomeranggmail.com/",
-    logo: "/logos/boomerang.png",
+    logo: "/aya-ai-platform/logos/boomerang.png",
     description: "AI email scheduling and response suggestions. Schedule emails, get reminded to follow up, and write better emails with AI.",
     features: ["Email scheduling", "Follow-up reminders", "AI writing assistant", "Response tracking"],
     useCases: [
@@ -715,7 +715,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.5,
     userCount: "2M+",
     website: "https://gamma.app/",
-    logo: "/logos/gamma.png",
+    logo: "/aya-ai-platform/logos/gamma.png",
     description: "Create presentations, documents, and websites with AI. Generate beautiful, professional content from simple prompts.",
     features: ["AI generation", "Multiple formats", "Design templates", "Collaboration"],
     useCases: [
@@ -736,7 +736,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.3,
     userCount: "1M+",
     website: "https://www.beautiful.ai/",
-    logo: "/logos/beautiful-ai.png",
+    logo: "/aya-ai-platform/logos/beautiful-ai.png",
     description: "AI-powered presentation design with smart templates. Creates professional slides that automatically adjust as you add content.",
     features: ["Smart templates", "Auto-formatting", "Design intelligence", "Team collaboration"],
     useCases: [
@@ -757,7 +757,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.4,
     userCount: "3M+",
     website: "https://tome.app/",
-    logo: "/logos/tome.png",
+    logo: "/aya-ai-platform/logos/tome.png",
     description: "Storytelling presentations generated by AI. Create immersive, interactive presentations with AI-generated content and images.",
     features: ["AI storytelling", "Interactive elements", "Image generation", "Responsive design"],
     useCases: [
@@ -778,7 +778,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.2,
     userCount: "10M+",
     website: "https://slidesgo.com/ai-presentations",
-    logo: "/logos/slidesgo.png",
+    logo: "/aya-ai-platform/logos/slidesgo.png",
     description: "AI presentation templates and design assistance. Generate customized presentation templates based on your topic and preferences.",
     features: ["AI templates", "Customization options", "Design variety", "PowerPoint compatibility"],
     useCases: [
@@ -801,7 +801,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.8,
     userCount: "1M+",
     website: "https://cursor.sh/",
-    logo: "/logos/cursor.png",
+    logo: "/aya-ai-platform/logos/cursor.png",
     description: "AI-powered code editor and development environment. Built for AI-first development with advanced code generation and editing.",
     features: ["AI code generation", "Codebase chat", "Multi-file editing", "VS Code compatibility"],
     useCases: [
@@ -822,7 +822,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.6,
     userCount: "5M+",
     website: "https://github.com/features/copilot",
-    logo: "/logos/github-copilot.png",
+    logo: "/aya-ai-platform/logos/github-copilot.png",
     description: "AI pair programmer integrated with VS Code and other editors. Suggests code completions and entire functions as you type.",
     features: ["Code completion", "Function generation", "Multiple languages", "IDE integration"],
     useCases: [
@@ -843,7 +843,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.4,
     userCount: "20M+",
     website: "https://replit.com/",
-    logo: "/logos/replit.png",
+    logo: "/aya-ai-platform/logos/replit.png",
     description: "AI-assisted coding in the browser. Code, collaborate, and deploy projects with AI help, all without local setup.",
     features: ["Browser-based coding", "AI assistance", "Collaboration", "Instant deployment"],
     useCases: [
@@ -864,7 +864,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.3,
     userCount: "1M+",
     website: "https://www.tabnine.com/",
-    logo: "/logos/tabnine.png",
+    logo: "/aya-ai-platform/logos/tabnine.png",
     description: "AI code completion and suggestions across multiple IDEs. Provides intelligent code completions based on your codebase.",
     features: ["Code completion", "Multiple IDEs", "Team training", "Privacy-focused"],
     useCases: [
@@ -887,7 +887,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.5,
     userCount: "500K+",
     website: "https://www.adcreative.ai/",
-    logo: "/logos/adcreative.png",
+    logo: "/aya-ai-platform/logos/adcreative.png",
     description: "Generate high-converting ad creatives with AI. Create professional ads for Facebook, Google, and other platforms automatically.",
     features: ["Ad generation", "A/B testing", "Brand consistency", "Performance insights"],
     useCases: [
@@ -908,7 +908,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.3,
     userCount: "75K+",
     website: "https://buffer.com/",
-    logo: "/logos/buffer.png",
+    logo: "/aya-ai-platform/logos/buffer.png",
     description: "AI-powered social media scheduling and content creation. Plan, create, and analyze social media content with AI assistance.",
     features: ["Content scheduling", "AI writing", "Analytics", "Team collaboration"],
     useCases: [
@@ -929,7 +929,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.1,
     userCount: "18M+",
     website: "https://hootsuite.com/",
-    logo: "/logos/hootsuite.png",
+    logo: "/aya-ai-platform/logos/hootsuite.png",
     description: "Social media management with AI insights. Comprehensive platform for managing, scheduling, and analyzing social media.",
     features: ["Social scheduling", "AI insights", "Team management", "Advanced analytics"],
     useCases: [
@@ -950,7 +950,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.4,
     userCount: "100K+",
     website: "https://www.vista.social/",
-    logo: "/logos/vista-social.png",
+    logo: "/aya-ai-platform/logos/vista-social.png",
     description: "AI social media content creation and management. Create, schedule, and analyze social media content with AI assistance.",
     features: ["AI content creation", "Visual calendar", "Analytics", "Team collaboration"],
     useCases: [
@@ -973,7 +973,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.5,
     userCount: "20M+",
     website: "https://www.tripit.com/",
-    logo: "/logos/tripit.png",
+    logo: "/aya-ai-platform/logos/tripit.png",
     description: "AI travel itinerary organization. Automatically creates travel itineraries from confirmation emails and provides real-time updates.",
     features: ["Auto itinerary creation", "Real-time updates", "Travel alerts", "Expense tracking"],
     useCases: [
@@ -994,7 +994,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.6,
     userCount: "100M+",
     website: "https://www.kayak.com/",
-    logo: "/logos/kayak.png",
+    logo: "/aya-ai-platform/logos/kayak.png",
     description: "AI-powered travel search and price predictions. Find flights, hotels, and rental cars with intelligent price forecasting.",
     features: ["Price predictions", "Travel search", "Price alerts", "Trip planning"],
     useCases: [
@@ -1015,7 +1015,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.7,
     userCount: "5M+",
     website: "https://wanderlog.com/",
-    logo: "/logos/wanderlog.png",
+    logo: "/aya-ai-platform/logos/wanderlog.png",
     description: "Collaborative trip planning with AI suggestions. Plan trips with friends, get AI recommendations, and organize everything in one place.",
     features: ["Collaborative planning", "AI recommendations", "Itinerary optimization", "Offline access"],
     useCases: [
@@ -1038,7 +1038,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.8,
     userCount: "100M+",
     website: "https://www.headspace.com/",
-    logo: "/logos/headspace.png",
+    logo: "/aya-ai-platform/logos/headspace.png",
     description: "AI-personalized meditation and wellness. Get customized meditation sessions, sleep stories, and mindfulness exercises.",
     features: ["Personalized sessions", "Sleep stories", "Mindfulness exercises", "Progress tracking"],
     useCases: [
@@ -1059,7 +1059,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.6,
     userCount: "200M+",
     website: "https://www.myfitnesspal.com/",
-    logo: "/logos/myfitnesspal.png",
+    logo: "/aya-ai-platform/logos/myfitnesspal.png",
     description: "AI nutrition tracking and recommendations. Track calories, get personalized nutrition insights, and achieve health goals.",
     features: ["Calorie tracking", "Nutrition insights", "Goal setting", "Recipe suggestions"],
     useCases: [
@@ -1080,7 +1080,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.4,
     userCount: "10M+",
     website: "https://ada.com/",
-    logo: "/logos/ada.png",
+    logo: "/aya-ai-platform/logos/ada.png",
     description: "AI symptom checker and health assessment. Get personalized health insights and guidance based on your symptoms.",
     features: ["Symptom checking", "Health assessments", "Personalized insights", "Medical guidance"],
     useCases: [
@@ -1103,7 +1103,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.6,
     userCount: "100M+",
     website: "https://www.coursera.org/",
-    logo: "/logos/coursera.png",
+    logo: "/aya-ai-platform/logos/coursera.png",
     description: "AI-powered course recommendations and learning paths. Access university-level courses with personalized learning experiences.",
     features: ["AI recommendations", "University partnerships", "Certificates", "Career guidance"],
     useCases: [
@@ -1124,7 +1124,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.7,
     userCount: "500M+",
     website: "https://www.duolingo.com/",
-    logo: "/logos/duolingo.png",
+    logo: "/aya-ai-platform/logos/duolingo.png",
     description: "AI language learning with personalized lessons. Learn languages through gamified, adaptive lessons that adjust to your progress.",
     features: ["Adaptive learning", "Gamification", "Speech recognition", "Progress tracking"],
     useCases: [
@@ -1145,7 +1145,7 @@ export const tools: ToolkitItem[] = [
     rating: 4.5,
     userCount: "50M+",
     website: "https://socratic.org/",
-    logo: "/logos/socratic.png",
+    logo: "/aya-ai-platform/logos/socratic.png",
     description: "Google's AI homework helper. Take a photo of homework questions and get step-by-step explanations and learning resources.",
     features: ["Photo recognition", "Step-by-step solutions", "Multiple subjects", "Learning resources"],
     useCases: [

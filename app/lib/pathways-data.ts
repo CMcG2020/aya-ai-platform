@@ -4,6 +4,7 @@ export interface PathwaySection {
   section: string;
   id: string;
   category: string;
+  logo: string;
   courses: Course[];
 }
 
@@ -12,10 +13,11 @@ export const pathways: PathwaySection[] = [
     section: "Foundational AI Courses",
     id: "foundational-ai",
     category: "foundational-ai",
+    logo: "/logos/deeplearning-ai.png",
     courses: [
       {
         title: "AI For Everyone",
-        image: "/images/ai-for-everyone.jpg",
+        image: "/logos/deeplearning-ai.png",
         platform: "DeepLearning.AI (Coursera)",
         length: "4 weeks",
         summary: "Non-technical introduction to AI concepts, perfect for beginners across all industries",
@@ -24,7 +26,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "Google AI Essentials",
-        image: "/images/google-ai-essentials.jpg",
+        image: "/logos/google.png",
         platform: "Google (Coursera)",
         length: "10 hours",
         summary: "Covers prompt engineering, generative AI, and practical AI applications",
@@ -33,7 +35,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "IBM AI Foundations for Everyone",
-        image: "/images/ibm-ai-foundations.jpg",
+        image: "/logos/ibm.png",
         platform: "IBM (Coursera)",
         length: "3 months",
         summary: "Comprehensive specialization covering AI fundamentals and practical applications",
@@ -46,10 +48,11 @@ export const pathways: PathwaySection[] = [
     section: "Advanced AI & ML",
     id: "advanced-ai-ml",
     category: "advanced-ai-ml",
+    logo: "/logos/stanford.png",
     courses: [
       {
         title: "Machine Learning Specialization",
-        image: "/images/ml-specialization.jpg",
+        image: "/logos/deeplearning-ai.png",
         platform: "Stanford/DeepLearning.AI (Coursera)",
         length: "3 months",
         summary: "Industry-standard course for hands-on ML development",
@@ -58,7 +61,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "IBM AI Engineering Professional Certificate",
-        image: "/images/ibm-ai-engineering.jpg",
+        image: "/logos/ibm.png",
         platform: "IBM (Coursera)",
         length: "6 months",
         summary: "Advanced program covering deep learning, PyTorch, and TensorFlow",
@@ -71,10 +74,11 @@ export const pathways: PathwaySection[] = [
     section: "Data Science & Analytics",
     id: "data-science-analytics",
     category: "data-science-analytics",
+    logo: "/logos/google.png",
     courses: [
       {
         title: "Google Data Analytics Professional Certificate",
-        image: "/images/google-data-analytics.jpg",
+        image: "/logos/google.png",
         platform: "Google (Coursera)",
         length: "6 months",
         summary: "Complete pathway from beginner to job-ready data analyst",
@@ -83,7 +87,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "IBM Data Science Professional Certificate",
-        image: "/images/ibm-data-science.jpg",
+        image: "/logos/ibm.png",
         platform: "IBM (Coursera)",
         length: "11 months",
         summary: "Comprehensive program covering Python, SQL, and machine learning",
@@ -92,7 +96,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "Data Analysis with Python",
-        image: "/images/datacamp-python.jpg",
+        image: "/logos/datacamp.png",
         platform: "DataCamp",
         length: "4 hours",
         summary: "Hands-on approach to data analysis and visualization",
@@ -105,10 +109,11 @@ export const pathways: PathwaySection[] = [
     section: "Programming & Software Development",
     id: "programming-development",
     category: "programming-development",
+    logo: "/logos/coding-black-females.png",
     courses: [
       {
         title: "Python Programming for Beginners",
-        image: "/images/python-beginners.jpg",
+        image: "/logos/various.png",
         platform: "Various Platforms",
         length: "8-12 weeks",
         summary: "Essential programming language for AI and data science",
@@ -117,7 +122,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "JavaScript for Beginners",
-        image: "/images/javascript-beginners.jpg",
+        image: "/logos/various.png",
         platform: "Various Platforms",
         length: "6-10 weeks",
         summary: "Critical for web development and modern applications",
@@ -126,7 +131,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "Full Stack Development Bootcamp",
-        image: "/images/coding-black-females.jpg",
+        image: "/logos/coding-black-females.png",
         platform: "Coding Black Females",
         length: "12-24 weeks",
         summary: "Comprehensive program designed specifically for Black women in tech",
@@ -139,10 +144,11 @@ export const pathways: PathwaySection[] = [
     section: "UX/UI Design",
     id: "ux-ui-design",
     category: "ux-ui-design",
+    logo: "/logos/careerfoundry.png",
     courses: [
       {
         title: "CareerFoundry UX Design Program",
-        image: "/images/careerfoundry-ux.jpg",
+        image: "/logos/careerfoundry.png",
         platform: "CareerFoundry",
         length: "5-10 months",
         summary: "Complete career-change program with job guarantee",
@@ -151,7 +157,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "Google UX Design Certificate",
-        image: "/images/google-ux-design.jpg",
+        image: "/logos/google.png",
         platform: "Google (Coursera)",
         length: "6 months",
         summary: "Industry-recognized credential for UX design",
@@ -160,7 +166,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "UX Academy Beginner Course",
-        image: "/images/ux-academy.jpg",
+        image: "/logos/ux-academy.png",
         platform: "UX Academy",
         length: "8 weeks",
         summary: "Live online classes with small class sizes",
@@ -173,10 +179,11 @@ export const pathways: PathwaySection[] = [
     section: "Cybersecurity",
     id: "cybersecurity",
     category: "cybersecurity",
+    logo: "/logos/google.png",
     courses: [
       {
         title: "Google Cybersecurity Professional Certificate",
-        image: "/images/google-cybersecurity.jpg",
+        image: "/logos/google.png",
         platform: "Google (Coursera)",
         length: "6 months",
         summary: "Comprehensive program covering threat detection, incident response, and security tools",
@@ -185,7 +192,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "IBM Cybersecurity Analyst Professional Certificate",
-        image: "/images/ibm-cybersecurity.jpg",
+        image: "/logos/ibm.png",
         platform: "IBM (Coursera)",
         length: "8 months",
         summary: "Hands-on training in cybersecurity analysis and threat hunting",
@@ -194,7 +201,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "EC-Council Essentials Series",
-        image: "/images/ec-council.jpg",
+        image: "/logos/ec-council.png",
         platform: "EC-Council (Free)",
         length: "Self-paced",
         summary: "Free courses in ethical hacking, network defense, and digital forensics",
@@ -207,10 +214,11 @@ export const pathways: PathwaySection[] = [
     section: "Cloud Computing & DevOps",
     id: "cloud-devops",
     category: "cloud-devops",
+    logo: "/logos/aws.png",
     courses: [
       {
         title: "AWS Fundamentals Specialization",
-        image: "/images/aws-fundamentals.jpg",
+        image: "/logos/aws.png",
         platform: "Amazon Web Services (Coursera)",
         length: "4 months",
         summary: "Essential cloud computing skills for modern tech careers",
@@ -219,7 +227,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "Google Cloud Professional Certificates",
-        image: "/images/google-cloud.jpg",
+        image: "/logos/google-cloud.png",
         platform: "Google Cloud (Coursera)",
         length: "3-6 months",
         summary: "Industry-recognized cloud computing credentials",
@@ -228,7 +236,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "Microsoft Azure Fundamentals",
-        image: "/images/azure-fundamentals.jpg",
+        image: "/logos/microsoft.png",
         platform: "Microsoft (Microsoft Learn)",
         length: "Self-paced",
         summary: "Microsoft's cloud platform essentials",
@@ -241,10 +249,11 @@ export const pathways: PathwaySection[] = [
     section: "Product Management & Business",
     id: "product-management",
     category: "product-management",
+    logo: "/logos/ibm.png",
     courses: [
       {
         title: "IBM AI Product Manager Professional Certificate",
-        image: "/images/ibm-ai-product.jpg",
+        image: "/logos/ibm.png",
         platform: "IBM (Coursera)",
         length: "6 months",
         summary: "Specialized program for AI product management",
@@ -253,7 +262,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "Essential Product Management",
-        image: "/images/products-that-count.jpg",
+        image: "/logos/products-that-count.png",
         platform: "Products That Count (Free)",
         length: "Self-paced",
         summary: "Free comprehensive product management training",
@@ -262,7 +271,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "AI For Business Specialization",
-        image: "/images/ai-business-upenn.jpg",
+        image: "/logos/upenn.png",
         platform: "University of Pennsylvania (Coursera)",
         length: "4 months",
         summary: "Strategic AI implementation for business leaders",
@@ -275,10 +284,11 @@ export const pathways: PathwaySection[] = [
     section: "Specialized Tech Skills",
     id: "specialized-tech",
     category: "specialized-tech",
+    logo: "/logos/google.png",
     courses: [
       {
         title: "Digital Marketing Professional Certificate",
-        image: "/images/google-digital-marketing.jpg",
+        image: "/logos/google.png",
         platform: "Google (Coursera)",
         length: "6 months",
         summary: "Essential digital marketing skills for tech careers",
@@ -287,7 +297,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "Project Management Professional (PMP) Prep",
-        image: "/images/pmp-prep.jpg",
+        image: "/logos/various.png",
         platform: "Various Platforms",
         length: "3-6 months",
         summary: "Critical project management skills for tech leadership",
@@ -300,10 +310,11 @@ export const pathways: PathwaySection[] = [
     section: "Women-Focused Tech Programs",
     id: "women-focused",
     category: "women-focused",
+    logo: "/logos/allwomen.png",
     courses: [
       {
         title: "allWomen Academy",
-        image: "/images/allwomen-academy.jpg",
+        image: "/logos/allwomen.png",
         platform: "allWomen Academy",
         length: "3-6 months",
         summary: "Specialized programs in Data Science, Data Analytics, UX/UI, and Product Management specifically for women",
@@ -312,7 +323,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "Hackbright Academy",
-        image: "/images/hackbright.jpg",
+        image: "/logos/hackbright.png",
         platform: "Hackbright Academy",
         length: "12-24 weeks",
         summary: "Female-focused software engineering bootcamp",
@@ -321,7 +332,7 @@ export const pathways: PathwaySection[] = [
       },
       {
         title: "Women in Tech Network Courses",
-        image: "/images/women-in-tech.jpg",
+        image: "/logos/women-in-tech.png",
         platform: "Women in Tech Network",
         length: "Varies",
         summary: "Various tech courses designed specifically for women's career advancement",

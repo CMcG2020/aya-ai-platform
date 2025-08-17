@@ -1,15 +1,19 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
-
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+
 const nextConfig = {
+  // Export as static site for GitHub Pages
   output: 'export',
-  trailingSlash: true,
-  basePath: '/aya-ai-platform',
+  // Ensure all asset links work under the GitHub Pages subpath
+  basePath: isProd ? '/aya-ai-platform' : '',
+  assetPrefix: isProd ? '/aya-ai-platform/' : '',
+  // Disable image optimization for static hosting (GitHub Pages)
   images: {
-    unoptimized: true
-  }
+    unoptimized: true,
+    // If you switch back to optimized images, add remotePatterns/domains here
+  },
+  // Optional but often helpful for GitHub Pages
+  trailingSlash: true,
 }
 
-module.exports = withBundleAnalyzer(nextConfig)
+module.exports = nextConfig
