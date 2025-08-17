@@ -3,65 +3,66 @@ export function getPlatformLogo(platform: string): string {
   const p = (platform || '').toLowerCase();
 
   // For GitHub Pages deployment, we need to handle basePath correctly
-  // Next.js should automatically prepend basePath to these paths in production
+  const basePath = process.env.NODE_ENV === 'production' ? '/aya-ai-platform' : '';
+  
   if (p.includes('google cloud')) {
-    return '/logos/google-cloud.png';
+    return `${basePath}/logos/google-cloud.png`;
   }
   if (p.includes('google')) {
-    return '/logos/google.png';
+    return `${basePath}/logos/google.png`;
   }
   if (p.includes('amazon web services') || p.includes('aws')) {
-    return '/logos/aws.png';
+    return `${basePath}/logos/aws.png`;
   }
   if (p.includes('microsoft')) {
-    return '/logos/microsoft.png';
+    return `${basePath}/logos/microsoft.png`;
   }
   if (p.includes('ibm')) {
-    return '/logos/ibm.png';
+    return `${basePath}/logos/ibm.png`;
   }
   if (p.includes('deeplearning.ai')) {
-    return '/logos/deeplearning-ai.png';
+    return `${basePath}/logos/deeplearning-ai.png`;
   }
   if (p.includes('stanford')) {
-    return '/logos/stanford.png';
+    return `${basePath}/logos/stanford.png`;
   }
   if (p.includes('university of pennsylvania') || p.includes('wharton') || p.includes('upenn')) {
-    return '/logos/upenn.png';
+    return `${basePath}/logos/upenn.png`;
   }
   if (p.includes('coursera')) {
-    return '/logos/coursera.png';
+    return `${basePath}/logos/coursera.png`;
   }
   if (p.includes('datacamp')) {
-    return '/logos/datacamp.png';
+    return `${basePath}/logos/datacamp.png`;
   }
   if (p.includes('coding black females')) {
-    return '/logos/coding-black-females.png';
+    return `${basePath}/logos/coding-black-females.png`;
   }
   if (p.includes('careerfoundry')) {
-    return '/logos/careerfoundry.png';
+    return `${basePath}/logos/careerfoundry.png`;
   }
   if (p.includes('ux academy')) {
-    return '/logos/ux-academy.png';
+    return `${basePath}/logos/ux-academy.png`;
   }
   if (p.includes('ec-council') || p.includes('eccouncil')) {
-    return '/logos/ec-council.png';
+    return `${basePath}/logos/ec-council.png`;
   }
   if (p.includes('products that count')) {
-    return '/logos/products-that-count.png';
+    return `${basePath}/logos/products-that-count.png`;
   }
   if (p.includes('allwomen')) {
-    return '/logos/allwomen.png';
+    return `${basePath}/logos/allwomen.png`;
   }
   if (p.includes('hackbright')) {
-    return '/logos/hackbright.png';
+    return `${basePath}/logos/hackbright.png`;
   }
   if (p.includes('women in tech')) {
-    return '/logos/women-in-tech.png';
+    return `${basePath}/logos/women-in-tech.png`;
   }
   if (p.includes('various')) {
-    return '/logos/various.png';
+    return `${basePath}/logos/various.png`;
   }
 
-  // Default fallback to a local, small asset
-  return '/logos/coursera.png';
+  // Default fallback
+  return `${basePath}/logos/coursera.png`;
 }

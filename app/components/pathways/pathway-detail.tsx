@@ -12,6 +12,11 @@ interface PathwayDetailProps {
   pathway: PathwaySection & { courses: Course[] }
 }
 
+const getLogoPath = (filename: string): string => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/aya-ai-platform' : '';
+  return `${basePath}/logos/${filename}`;
+};
+
 const PathwayDetail = ({ pathway }: PathwayDetailProps) => {
   const [enrollmentStatus, setEnrollmentStatus] = useState<'not-enrolled' | 'enrolling' | 'enrolled'>('not-enrolled')
 
@@ -189,7 +194,7 @@ const PathwayDetail = ({ pathway }: PathwayDetailProps) => {
                         <div className="flex items-center space-x-2 mt-3 ml-11">
                           <div className="relative w-6 h-6">
                             <Image
-                              src={getPlatformLogo(pathway.courses[index]?.platform || '')}
+                              src={`/logos/${pathway.courses[index]?.platform.toLowerCase()}.png`}
                               alt="Platform logo"
                               fill
                               className="object-contain"
@@ -275,7 +280,7 @@ const PathwayDetail = ({ pathway }: PathwayDetailProps) => {
                 <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
                   <div className="relative w-10 h-10">
                     <Image
-                      src="/logos/google.png"
+                      src={getLogoPath("google.png")}
                       alt="Related pathway"
                       fill
                       className="object-contain rounded"
@@ -289,7 +294,7 @@ const PathwayDetail = ({ pathway }: PathwayDetailProps) => {
                 <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
                   <div className="relative w-10 h-10">
                     <Image
-                      src="/logos/microsoft.png"
+                      src={getLogoPath("microsoft.png")}
                       alt="Related pathway"
                       fill
                       className="object-contain rounded"
