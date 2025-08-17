@@ -1,8 +1,9 @@
- // Helper function to get platform logo based on platform name
+// Helper function to get platform logo based on platform name
 export function getPlatformLogo(platform: string): string {
   const p = (platform || '').toLowerCase();
 
-  // Use local copies from /public/logos to avoid network-induced flashing
+  // For GitHub Pages deployment, we need to handle basePath correctly
+  // Next.js should automatically prepend basePath to these paths in production
   if (p.includes('google cloud')) {
     return '/logos/google-cloud.png';
   }

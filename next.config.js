@@ -6,7 +6,8 @@ const nextConfig = {
   output: 'export',
   // Ensure all asset links work under the GitHub Pages subpath
   basePath: isProd ? '/aya-ai-platform' : '',
-  assetPrefix: isProd ? '/aya-ai-platform/' : '',
+  // Remove assetPrefix as it can interfere with basePath for static assets
+  // assetPrefix: isProd ? '/aya-ai-platform/' : '',
   // Disable image optimization for static hosting (GitHub Pages)
   images: {
     unoptimized: true,
